@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         print("Anthony Push")
         print("desti")
         print("Theo push lagi")
+        
+        
+        print("ga push")
     }
 
 
