@@ -489,6 +489,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="59c-fw-m5M"/>
                     </view>
+                    <connections>
+                        <outlet property="challengeNameLbl" destination="oJH-ri-SNa" id="YxW-6i-gX7"/>
+                        <outlet property="descriptionLbl" destination="iOT-2z-aUS" id="qPV-4L-nJy"/>
+                        <outlet property="minRepsLbl" destination="LGg-lc-1P5" id="oBC-HS-2DJ"/>
+                        <outlet property="objectLbl" destination="S4h-qT-AGE" id="pCE-tm-kb4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUx-Fz-L3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

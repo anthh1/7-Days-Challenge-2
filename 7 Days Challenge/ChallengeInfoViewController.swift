@@ -11,6 +11,12 @@ import MobileCoreServices
 
 class ChallengeInfoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
+    
+    @IBOutlet weak var challengeNameLbl: UILabel!
+    @IBOutlet weak var minRepsLbl: UILabel!
+    @IBOutlet weak var objectLbl: UILabel!
+    @IBOutlet weak var descriptionLbl: UILabel!
+    
     var controller = UIImagePickerController()
     let videoFileName = "/video.mp4"
     
