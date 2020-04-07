@@ -16,12 +16,16 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     @IBOutlet weak var objectLbl: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
     
+    var tempChallengeName: String
+    var tempMinReps: Int
+    var tempObject: String
+    var tempDesc: String
+    
     var controller = UIImagePickerController()
     let videoFileName = "/video.mp4"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     
