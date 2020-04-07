@@ -23,6 +23,8 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
         super.viewDidLoad()
         
     }
+    
+    
     @IBAction func btnDoChallenge(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             controller.sourceType = .camera

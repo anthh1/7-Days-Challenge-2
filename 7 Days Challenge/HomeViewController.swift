@@ -11,7 +11,14 @@ import UIKit
 class HomeViewController: UITableViewController {
 
     let challenges = [
+       Challenge(challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: ""),
+       Challenge(challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: ""),
+       Challenge(challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: ""),
+       Challenge(challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: ""),
+       Challenge(challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: ""),
+       Challenge(challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: ""),
        Challenge(challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: "")
+
     ]
     
     override func viewDidLoad() {
@@ -35,6 +42,18 @@ class HomeViewController: UITableViewController {
         cell.textLabel?.text = challenge.challengeName
         cell.detailTextLabel?.text = "\(challenge.challengeScore)"
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let challenge = challenges[indexPath.row]
+        performSegue(withIdentifier: "challengeInfoVC", sender: challenge)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let challengeInfoVC = segue.destination as? ChallengeInfoViewController {
+            
+        }
     }
     
 //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

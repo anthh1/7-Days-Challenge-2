@@ -91,10 +91,10 @@
 			children = (
 				92AAE96324388B7C00EC0611 /* AppDelegate.swift */,
 				92AAE96524388B7C00EC0611 /* SceneDelegate.swift */,
-				D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */,
 				D72DF0022439FAF300ECA0DB /* DoChallengeViewController.swift */,
 				92AAE96724388B7C00EC0611 /* ViewController.swift */,
 				92AAE97724388D6600EC0611 /* HomeViewController.swift */,
+				D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */,
 				92AAE97B243898DB00EC0611 /* ChallengeView.swift */,
 				92AAE979243898B700EC0611 /* ProfileView.swift */,
 				92AAE97D24389A2200EC0611 /* AchievementModal.swift */,
