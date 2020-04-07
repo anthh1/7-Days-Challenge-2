@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import
+import Lottie
 
 class LaunchScreenView: UIViewController {
 

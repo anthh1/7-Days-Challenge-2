@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "Lottie",
-        "repositoryURL": "https://github.com/airbnb/lottie-ios",
+        "repositoryURL": "https://github.com/airbnb/lottie-ios.git",
         "state": {
-          "branch": "lottie/macos-spm",
-          "revision": "f4d701070f9743b9ef7b9ac42d386d1ef98b842f",
-          "version": null
+          "branch": null,
+          "revision": "8f81de8d81da8631fd95ff81a9db133b76e13ea4",
+          "version": "3.1.6"
         }
       }
     ]
