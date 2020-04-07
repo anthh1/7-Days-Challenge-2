@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,6 @@
 		92AAE97A243898B700EC0611 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE979243898B700EC0611 /* ProfileView.swift */; };
 		92AAE97C243898DB00EC0611 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE97B243898DB00EC0611 /* ChallengeView.swift */; };
 		92AAE97E24389A2200EC0611 /* AchievementModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE97D24389A2200EC0611 /* AchievementModal.swift */; };
-		B7213774243C41D200A67EAA /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B7213773243C41D200A67EAA /* Lottie */; };
 		B7213776243C48A400A67EAA /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7213775243C48A300A67EAA /* LaunchScreenView.swift */; };
 		D718B5D5243C26CD00F29481 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718B5D4243C26CD00F29481 /* Challenge.swift */; };
 		D72DF0012439FADE00ECA0DB /* ChallengeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */; };
@@ -48,7 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7213774243C41D200A67EAA /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +108,6 @@
 			);
 			name = "7 Days Challenge";
 			packageProductDependencies = (
-				B7213773243C41D200A67EAA /* Lottie */,
 			);
 			productName = "7 Days Challenge";
 			productReference = 92AAE96024388B7C00EC0611 /* 7 Days Challenge.app */;
@@ -141,7 +138,6 @@
 			);
 			mainGroup = 92AAE95724388B7C00EC0611;
 			packageReferences = (
-				B7213772243C41D200A67EAA /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 92AAE96124388B7C00EC0611 /* Products */;
 			projectDirPath = "";
@@ -380,25 +376,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B7213772243C41D200A67EAA /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios";
-			requirement = {
-				branch = "lottie/macos-spm";
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B7213773243C41D200A67EAA /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B7213772243C41D200A67EAA /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 92AAE95824388B7C00EC0611 /* Project object */;
 }
