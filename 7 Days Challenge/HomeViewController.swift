@@ -35,16 +35,17 @@ class HomeViewController: UITableViewController {
         
         cell.textLabel?.text = challenge.challengeName
         cell.detailTextLabel?.text = "\(challenge.challengeScore)"
+        return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+//    }
     
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
-    }
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//    }
     
 
     /*

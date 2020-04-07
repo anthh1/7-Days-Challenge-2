@@ -18,7 +18,7 @@
 		92AAE97C243898DB00EC0611 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE97B243898DB00EC0611 /* ChallengeView.swift */; };
 		92AAE97E24389A2200EC0611 /* AchievementModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE97D24389A2200EC0611 /* AchievementModal.swift */; };
 		B71A3122243C6288000C8A7A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B71A3121243C6288000C8A7A /* Lottie */; };
-		B7213776243C48A400A67EAA /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7213775243C48A300A67EAA /* LaunchScreenView.swift */; };
+		B7213776243C48A400A67EAA /* AnimationTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7213775243C48A300A67EAA /* AnimationTestView.swift */; };
 		D718B5D5243C26CD00F29481 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718B5D4243C26CD00F29481 /* Challenge.swift */; };
 		D72DF0012439FADE00ECA0DB /* ChallengeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */; };
 		D72DF0032439FAF300ECA0DB /* DoChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DF0022439FAF300ECA0DB /* DoChallengeViewController.swift */; };
@@ -37,7 +37,7 @@
 		92AAE979243898B700EC0611 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		92AAE97B243898DB00EC0611 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		92AAE97D24389A2200EC0611 /* AchievementModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModal.swift; sourceTree = "<group>"; };
-		B7213775243C48A300A67EAA /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		B7213775243C48A300A67EAA /* AnimationTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTestView.swift; sourceTree = "<group>"; };
 		D718B5D4243C26CD00F29481 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeInfoViewController.swift; sourceTree = "<group>"; };
 		D72DF0022439FAF300ECA0DB /* DoChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoChallengeViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 				92AAE96E24388B7E00EC0611 /* LaunchScreen.storyboard */,
 				92AAE97124388B7E00EC0611 /* Info.plist */,
 				D718B5D4243C26CD00F29481 /* Challenge.swift */,
-				B7213775243C48A300A67EAA /* LaunchScreenView.swift */,
+				B7213775243C48A300A67EAA /* AnimationTestView.swift */,
 			);
 			path = "7 Days Challenge";
 			sourceTree = "<group>";
@@ -178,7 +178,7 @@
 				92AAE96624388B7C00EC0611 /* SceneDelegate.swift in Sources */,
 				D72DF0032439FAF300ECA0DB /* DoChallengeViewController.swift in Sources */,
 				D72DF0012439FADE00ECA0DB /* ChallengeInfoViewController.swift in Sources */,
-				B7213776243C48A400A67EAA /* LaunchScreenView.swift in Sources */,
+				B7213776243C48A400A67EAA /* AnimationTestView.swift in Sources */,
 				92AAE97824388D6600EC0611 /* HomeViewController.swift in Sources */,
 				D718B5D5243C26CD00F29481 /* Challenge.swift in Sources */,
 			);
