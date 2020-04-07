@@ -20,8 +20,6 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     }
     @IBAction func btnDoChallenge(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                
-            // 2 Present UIImagePickerController to take video
             controller.sourceType = .camera
             controller.mediaTypes = [kUTTypeMovie as String]
             controller.delegate = self
