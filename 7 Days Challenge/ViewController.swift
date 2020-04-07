@@ -15,13 +15,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         print("test")
         print("test2")
-        
         print("Halo")
         print("Anthony Push")
         print("desti")
         print("Theo push lagi")
-        
-        
         print("ga push")
     }
 
