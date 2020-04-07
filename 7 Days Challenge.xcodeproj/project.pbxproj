@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,15 +17,17 @@
 		92AAE97A243898B700EC0611 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE979243898B700EC0611 /* ProfileView.swift */; };
 		92AAE97C243898DB00EC0611 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE97B243898DB00EC0611 /* ChallengeView.swift */; };
 		92AAE97E24389A2200EC0611 /* AchievementModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE97D24389A2200EC0611 /* AchievementModal.swift */; };
-		B7213774243C41D200A67EAA /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B7213773243C41D200A67EAA /* Lottie */; };
-		B7213776243C48A400A67EAA /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7213775243C48A300A67EAA /* LaunchScreenView.swift */; };
 		D718B5D5243C26CD00F29481 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718B5D4243C26CD00F29481 /* Challenge.swift */; };
 		D718B5D9243C390300F29481 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D718B5D8243C390300F29481 /* .gitignore */; };
 		D72DF0012439FADE00ECA0DB /* ChallengeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */; };
 		D72DF0032439FAF300ECA0DB /* DoChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DF0022439FAF300ECA0DB /* DoChallengeViewController.swift */; };
+		EB802424F9C89C415EA801EB /* Pods_7_Days_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86065F57921B3B8133640674 /* Pods_7_Days_Challenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1900C48DB9C1BE58437AAD2A /* Pods-7 Days Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-7 Days Challenge.release.xcconfig"; path = "Target Support Files/Pods-7 Days Challenge/Pods-7 Days Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		5D0A0E39970A5A0049AAAA5F /* Pods-7 Days Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-7 Days Challenge.debug.xcconfig"; path = "Target Support Files/Pods-7 Days Challenge/Pods-7 Days Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		86065F57921B3B8133640674 /* Pods_7_Days_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_7_Days_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AAE96024388B7C00EC0611 /* 7 Days Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "7 Days Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AAE96324388B7C00EC0611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92AAE96524388B7C00EC0611 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,7 +40,6 @@
 		92AAE979243898B700EC0611 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		92AAE97B243898DB00EC0611 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		92AAE97D24389A2200EC0611 /* AchievementModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModal.swift; sourceTree = "<group>"; };
-		B7213775243C48A300A67EAA /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		D718B5D4243C26CD00F29481 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		D718B5D8243C390300F29481 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeInfoViewController.swift; sourceTree = "<group>"; };
@@ -50,19 +51,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7213774243C41D200A67EAA /* Lottie in Frameworks */,
+				EB802424F9C89C415EA801EB /* Pods_7_Days_Challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2130B9249BF2614B55B81268 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D0A0E39970A5A0049AAAA5F /* Pods-7 Days Challenge.debug.xcconfig */,
+				1900C48DB9C1BE58437AAD2A /* Pods-7 Days Challenge.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		92AAE95724388B7C00EC0611 = {
 			isa = PBXGroup;
 			children = (
 				D718B5D8243C390300F29481 /* .gitignore */,
 				92AAE96224388B7C00EC0611 /* 7 Days Challenge */,
 				92AAE96124388B7C00EC0611 /* Products */,
+				2130B9249BF2614B55B81268 /* Pods */,
+				ACF678BC49A8D7FD10D46FE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,9 +103,16 @@
 				92AAE96E24388B7E00EC0611 /* LaunchScreen.storyboard */,
 				92AAE97124388B7E00EC0611 /* Info.plist */,
 				D718B5D4243C26CD00F29481 /* Challenge.swift */,
-				B7213775243C48A300A67EAA /* LaunchScreenView.swift */,
 			);
 			path = "7 Days Challenge";
+			sourceTree = "<group>";
+		};
+		ACF678BC49A8D7FD10D46FE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86065F57921B3B8133640674 /* Pods_7_Days_Challenge.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92AAE97424388B7E00EC0611 /* Build configuration list for PBXNativeTarget "7 Days Challenge" */;
 			buildPhases = (
+				83867161E9C7B9F8A8557171 /* [CP] Check Pods Manifest.lock */,
 				92AAE95C24388B7C00EC0611 /* Sources */,
 				92AAE95D24388B7C00EC0611 /* Frameworks */,
 				92AAE95E24388B7C00EC0611 /* Resources */,
+				AA458BDC31D04FE077C319F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -113,7 +134,6 @@
 			);
 			name = "7 Days Challenge";
 			packageProductDependencies = (
-				B7213773243C41D200A67EAA /* Lottie */,
 			);
 			productName = "7 Days Challenge";
 			productReference = 92AAE96024388B7C00EC0611 /* 7 Days Challenge.app */;
@@ -144,7 +164,6 @@
 			);
 			mainGroup = 92AAE95724388B7C00EC0611;
 			packageReferences = (
-				B7213772243C41D200A67EAA /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 92AAE96124388B7C00EC0611 /* Products */;
 			projectDirPath = "";
@@ -169,6 +188,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		83867161E9C7B9F8A8557171 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-7 Days Challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA458BDC31D04FE077C319F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-7 Days Challenge/Pods-7 Days Challenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-7 Days Challenge/Pods-7 Days Challenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-7 Days Challenge/Pods-7 Days Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		92AAE95C24388B7C00EC0611 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -182,7 +243,6 @@
 				92AAE96624388B7C00EC0611 /* SceneDelegate.swift in Sources */,
 				D72DF0032439FAF300ECA0DB /* DoChallengeViewController.swift in Sources */,
 				D72DF0012439FADE00ECA0DB /* ChallengeInfoViewController.swift in Sources */,
-				B7213776243C48A400A67EAA /* LaunchScreenView.swift in Sources */,
 				92AAE97824388D6600EC0611 /* HomeViewController.swift in Sources */,
 				D718B5D5243C26CD00F29481 /* Challenge.swift in Sources */,
 			);
@@ -326,6 +386,7 @@
 		};
 		92AAE97524388B7E00EC0611 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D0A0E39970A5A0049AAAA5F /* Pods-7 Days Challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -345,6 +406,7 @@
 		};
 		92AAE97624388B7E00EC0611 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1900C48DB9C1BE58437AAD2A /* Pods-7 Days Challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -384,25 +446,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B7213772243C41D200A67EAA /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios";
-			requirement = {
-				branch = "lottie/macos-spm";
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B7213773243C41D200A67EAA /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B7213772243C41D200A67EAA /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 92AAE95824388B7C00EC0611 /* Project object */;
 }

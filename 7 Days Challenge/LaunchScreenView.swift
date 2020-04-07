@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Lottie
 
-class LaunchScreenView: UIViewController {
+class AnimationTestView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

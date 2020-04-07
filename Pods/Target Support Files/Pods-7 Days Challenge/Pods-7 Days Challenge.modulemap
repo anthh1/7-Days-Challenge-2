@@ -1,0 +1,6 @@
+framework module Pods_7_Days_Challenge {
+  umbrella header "Pods-7 Days Challenge-umbrella.h"
+
+  export *
+  module * { export * }
+}
