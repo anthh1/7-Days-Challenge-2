@@ -11,8 +11,7 @@ import UIKit
 class HomeViewController: UITableViewController {
 
     let challenges = [
-        Challenge(challengeName: "Push Up", challengeDay: 1, challengeScore: 150),
-        Challenge(challengeName: "Sit Up", challengeDay: 2, challengeScore: 150),
+       Challenge(challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: "")
     ]
     
     override func viewDidLoad() {

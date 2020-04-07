@@ -11,7 +11,6 @@ import MobileCoreServices
 
 class ChallengeInfoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
-    
     @IBOutlet weak var challengeNameLbl: UILabel!
     @IBOutlet weak var minRepsLbl: UILabel!
     @IBOutlet weak var objectLbl: UILabel!
