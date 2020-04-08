@@ -21,25 +21,39 @@ class HomeViewController: UITableViewController {
         Challenge(challengeID: 7, challengeName: "Push Up", challengeDay: 7, challengeScore: 700, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "")
     ]
     
-    let cellSpacingHeight: CGFloat = 50
-    let currentDate = Date()
-
-    var isChallengeStarted: Bool = false
-
+    var challengeDates = [String]()
     
+    let cellSpacingHeight: CGFloat = 50
+
+    var currentDate: String = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-                
-        fetchChallenge()
+        let dateFormatter = DateFormatter()
+        dateFormatter.setLocalizedDateFormatFromTemplate("d")
+        currentDate = dateFormatter.string(from: Date())
         
-        switch isChallengeStarted {
-        case true:
-            print("Challenge telah dimulai")
-        default:
-            startChallenges()
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        
+        let searchValue = currentDate
+        var currentIndex = 0
+
+        for challengeDate in challengeDates
+        {
+            if challengeDate != searchValue {
+                print("Found \(challengeDate) for index \(currentIndex)")
+                startChallenges()
+                break
+            }
+            currentIndex += 1
         }
+        
+        fetchChallenge()
+//
+//        deleteAllData("StartChallenge")
+//
+//        startChallenges()
     }
     
     func startChallenges() {
@@ -47,7 +61,7 @@ class HomeViewController: UITableViewController {
         let context = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "StartChallenge", in: context)
         let startChallenge = NSManagedObject(entity: entity!, insertInto: context)
-        startChallenge.setValue(currentDate, forKey: "startDate")
+        startChallenge.setValue(currentDate, forKey: "challengeDate")
         
         do {
            try context.save()
@@ -55,7 +69,7 @@ class HomeViewController: UITableViewController {
            print("Failed saving")
         }
     }
-    
+        
     func deleteAllData(_ entity:String) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -74,6 +88,7 @@ class HomeViewController: UITableViewController {
     }
     
     func fetchChallenge() {
+    
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "StartChallenge")
@@ -81,14 +96,32 @@ class HomeViewController: UITableViewController {
 
         do {
             let result = try context.fetch(request)
-            for data in result as! [NSManagedObject] {
-                print("\(data.value(forKey: "startDate"))")
-                isChallengeStarted = true
+            
+           for data in result as! [NSManagedObject] {
+                challengeDates.append("\(data.value(forKey: "challengeDate"))")
+                print(challengeDates.count)
+                print(challengeDates)
             }
             
         } catch {
             print("Failed")
         }
+    }
+    
+    
+    func convertToJSONArray(moArray: [NSManagedObject]) -> Any {
+        var jsonArray: [[String: Any]] = []
+        for item in moArray {
+            var dict: [String: Any] = [:]
+            for attribute in item.entity.attributesByName {
+                //check if value is present, then add key to dictionary so as to avoid the nil value crash
+                if let value = item.value(forKey: attribute.key) {
+                    dict[attribute.key] = value
+                }
+            }
+            jsonArray.append(dict)
+        }
+        return jsonArray
     }
     
     
@@ -162,4 +195,10 @@ class HomeViewController: UITableViewController {
     }
     */
 
+}
+
+extension Date {
+       func dayNumberOfWeek() -> Int? {
+           return Calendar.current.dateComponents([.weekday], from: self).weekday
+       }
 }
