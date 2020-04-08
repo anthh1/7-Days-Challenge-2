@@ -243,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0D-yE-iHW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="1598"/>
+            <point key="canvasLocation" x="1029" y="1554"/>
         </scene>
         <!--Achievement Modal-->
         <scene sceneID="dhK-vA-hgl">
@@ -366,21 +366,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUx-Fz-L3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2605.7971014492755" y="137.94642857142856"/>
-        </scene>
-        <!--Do Challenge View Controller-->
-        <scene sceneID="BjM-ns-kjR">
-            <objects>
-                <viewController id="clz-Xk-5CV" customClass="DoChallengeViewController" customModule="__Days_Challenge" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rwV-Vm-Xmb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="9QD-TO-t70"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s0A-Wd-VON" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3372" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yai-mW-GRo">
