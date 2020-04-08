@@ -43,7 +43,7 @@
 		92AAE979243898B700EC0611 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		92AAE97B243898DB00EC0611 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		92AAE97D24389A2200EC0611 /* AchievementModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModal.swift; sourceTree = "<group>"; };
-		B7ACAB9F243D7D810094ECB1 /* reward.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = reward.json; sourceTree = SOURCE_ROOT; };
+		B7ACAB9F243D7D810094ECB1 /* reward.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = reward.json; path = "7 Days Challenge/LottieAnimation/reward.json"; sourceTree = SOURCE_ROOT; };
 		C2A72A02243D73A700892591 /* YourVideos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourVideos.swift; sourceTree = "<group>"; };
 		D718B5D4243C26CD00F29481 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		D718B5D8243C390300F29481 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -95,23 +95,15 @@
 		92AAE96224388B7C00EC0611 /* 7 Days Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				B7ACAB9F243D7D810094ECB1 /* reward.json */,
+				D7C7A8BC243DD65100E154FD /* LottieAnimation */,
+				D7C7A8B9243DD61E00E154FD /* Model */,
+				D7C7A8BA243DD63B00E154FD /* View */,
+				D7C7A8BB243DD64100E154FD /* Controller */,
 				92AAE96324388B7C00EC0611 /* AppDelegate.swift */,
 				92AAE96524388B7C00EC0611 /* SceneDelegate.swift */,
-				92AAE96724388B7C00EC0611 /* ViewController.swift */,
-				92AAE97724388D6600EC0611 /* HomeViewController.swift */,
-				D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */,
-				92AAE97B243898DB00EC0611 /* ChallengeView.swift */,
-				92AAE979243898B700EC0611 /* ProfileView.swift */,
-				92AAE97D24389A2200EC0611 /* AchievementModal.swift */,
-				92AAE96924388B7C00EC0611 /* Main.storyboard */,
-				C2A72A02243D73A700892591 /* YourVideos.swift */,
 				92AAE96C24388B7E00EC0611 /* Assets.xcassets */,
 				92AAE96E24388B7E00EC0611 /* LaunchScreen.storyboard */,
 				92AAE97124388B7E00EC0611 /* Info.plist */,
-				D718B5D4243C26CD00F29481 /* Challenge.swift */,
-				D7C7A886243D7EA700E154FD /* ChallengeTableViewCell.swift */,
-				D7C7A8AF243DCC2200E154FD /* CoreData.xcdatamodeld */,
 			);
 			path = "7 Days Challenge";
 			sourceTree = "<group>";
@@ -122,6 +114,46 @@
 				86065F57921B3B8133640674 /* Pods_7_Days_Challenge.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7C7A8B9243DD61E00E154FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7C7A8AF243DCC2200E154FD /* CoreData.xcdatamodeld */,
+				D718B5D4243C26CD00F29481 /* Challenge.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7C7A8BA243DD63B00E154FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92AAE96924388B7C00EC0611 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7C7A8BB243DD64100E154FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				92AAE96724388B7C00EC0611 /* ViewController.swift */,
+				92AAE97724388D6600EC0611 /* HomeViewController.swift */,
+				D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */,
+				92AAE97B243898DB00EC0611 /* ChallengeView.swift */,
+				92AAE979243898B700EC0611 /* ProfileView.swift */,
+				92AAE97D24389A2200EC0611 /* AchievementModal.swift */,
+				C2A72A02243D73A700892591 /* YourVideos.swift */,
+				D7C7A886243D7EA700E154FD /* ChallengeTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D7C7A8BC243DD65100E154FD /* LottieAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				B7ACAB9F243D7D810094ECB1 /* reward.json */,
+			);
+			path = LottieAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
