@@ -205,6 +205,14 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3l-sT-VGe">
+                                <rect key="frame" x="338" y="358" width="47" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="See All"/>
+                                <connections>
+                                    <segue destination="LNM-xK-ihx" kind="show" id="uf7-SN-g8T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="10t-WJ-NhK"/>
@@ -216,20 +224,33 @@
             <point key="canvasLocation" x="1827.5362318840582" y="816.96428571428567"/>
         </scene>
         <!--Your Videos-->
-        <scene sceneID="Eji-qq-8nI">
+        <scene sceneID="PCR-XQ-MMD">
             <objects>
-                <viewController id="o0W-uI-DdC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2wo-FZ-Y4N">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <tableViewController id="LNM-xK-ihx" customClass="YourVideos" customModule="__Days_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EZ4-JB-NIc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="nzk-lV-2Xy"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Your Videos" id="fTh-Gv-Ypp"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1MS-4W-KeL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="kPB-VE-3jI">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kPB-VE-3jI" id="1Sb-dR-Dvr">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LNM-xK-ihx" id="4sA-NK-6sZ"/>
+                            <outlet property="delegate" destination="LNM-xK-ihx" id="Lae-Xs-maS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Uca-UX-XOh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uc2-KQ-V3u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2641" y="817"/>
+            <point key="canvasLocation" x="2645" y="820"/>
         </scene>
         <!--Achievement-->
         <scene sceneID="HMT-vC-QoM">
