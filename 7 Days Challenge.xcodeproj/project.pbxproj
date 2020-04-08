@@ -17,6 +17,7 @@
 		92AAE97A243898B700EC0611 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE979243898B700EC0611 /* ProfileView.swift */; };
 		92AAE97C243898DB00EC0611 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE97B243898DB00EC0611 /* ChallengeView.swift */; };
 		92AAE97E24389A2200EC0611 /* AchievementModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE97D24389A2200EC0611 /* AchievementModal.swift */; };
+		CA928658243D74E000A33172 /* reward.json in Resources */ = {isa = PBXBuildFile; fileRef = CA928657243D74E000A33172 /* reward.json */; };
 		C2A72A03243D73A700892591 /* YourVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A72A02243D73A700892591 /* YourVideos.swift */; };
 		D718B5D5243C26CD00F29481 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718B5D4243C26CD00F29481 /* Challenge.swift */; };
 		D718B5D9243C390300F29481 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D718B5D8243C390300F29481 /* .gitignore */; };
@@ -40,6 +41,7 @@
 		92AAE979243898B700EC0611 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		92AAE97B243898DB00EC0611 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		92AAE97D24389A2200EC0611 /* AchievementModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModal.swift; sourceTree = "<group>"; };
+		CA928657243D74E000A33172 /* reward.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = reward.json; path = ../../../Downloads/LottieAnimationTest/LottieAnimationTest/reward.json; sourceTree = "<group>"; };
 		C2A72A02243D73A700892591 /* YourVideos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourVideos.swift; sourceTree = "<group>"; };
 		D718B5D4243C26CD00F29481 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		D718B5D8243C390300F29481 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		92AAE96224388B7C00EC0611 /* 7 Days Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				CA928657243D74E000A33172 /* reward.json */,
 				92AAE96324388B7C00EC0611 /* AppDelegate.swift */,
 				92AAE96524388B7C00EC0611 /* SceneDelegate.swift */,
 				92AAE96724388B7C00EC0611 /* ViewController.swift */,
@@ -183,6 +186,7 @@
 				92AAE97024388B7E00EC0611 /* LaunchScreen.storyboard in Resources */,
 				92AAE96D24388B7E00EC0611 /* Assets.xcassets in Resources */,
 				92AAE96B24388B7C00EC0611 /* Main.storyboard in Resources */,
+				CA928658243D74E000A33172 /* reward.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
