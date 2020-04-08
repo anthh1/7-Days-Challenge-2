@@ -11,6 +11,7 @@ import Lottie
 
 class AchievementModal: UIViewController {
 
+    @IBOutlet var lottieView: UIView!
     
      let animationView = AnimationView()
     override func viewDidLoad() {
@@ -21,7 +22,7 @@ class AchievementModal: UIViewController {
 
            private func setupAnimation(){
                animationView.animation = Animation.named("reward")
-               animationView.frame = view.bounds
+            animationView.frame = lottieView.frame
                animationView.backgroundColor = .white
                animationView.contentMode = .scaleAspectFit
                animationView.loopMode = .loop
