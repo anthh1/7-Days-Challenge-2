@@ -20,17 +20,26 @@ class HomeViewController: UITableViewController {
         Challenge(challengeID: 7, challengeName: "Push Up", challengeDay: 7, challengeScore: 700, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "")
     ]
     
+    let cellSpacingHeight: CGFloat = 50
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return challenges.count
-        
+        if (section == 0) {
+            return 1
+        }
+        else{
+            return challenges.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,6 +52,10 @@ class HomeViewController: UITableViewController {
         
         return cell
     }
+     
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return cellSpacingHeight
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let challenge = challenges[indexPath.row]
@@ -50,7 +63,12 @@ class HomeViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
+        if section == 0 {
+            return "Today's Challenge"
+        } else {
+            return "Next Challenges"
+        }
+        
     }
     
     
