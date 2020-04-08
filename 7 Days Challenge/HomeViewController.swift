@@ -9,9 +9,6 @@
 import UIKit
 
 class HomeViewController: UITableViewController {
-    
-    var challengeName: String
-    
 
     let challenges = [
        Challenge(challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: ""),
@@ -43,8 +40,6 @@ class HomeViewController: UITableViewController {
         let challenge = challenges[indexPath.row]
         
         cell.textLabel?.text = challenge.challengeName
-        
-        challengeName = challenge.challengeName
         cell.detailTextLabel?.text = "\(challenge.challengeScore)"
         return cell
     }
@@ -57,7 +52,7 @@ class HomeViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let challengeInfoVC = segue.destination as? ChallengeInfoViewController {
-            challengeInfoVC.tempChallengeName = challengeName
+
         }
     }
     
