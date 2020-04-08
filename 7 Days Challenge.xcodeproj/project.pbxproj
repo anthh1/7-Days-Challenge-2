@@ -22,6 +22,7 @@
 		D718B5D5243C26CD00F29481 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718B5D4243C26CD00F29481 /* Challenge.swift */; };
 		D718B5D9243C390300F29481 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D718B5D8243C390300F29481 /* .gitignore */; };
 		D72DF0012439FADE00ECA0DB /* ChallengeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */; };
+		D7C7A887243D7EA700E154FD /* ChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7A886243D7EA700E154FD /* ChallengeTableViewCell.swift */; };
 		EB802424F9C89C415EA801EB /* Pods_7_Days_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86065F57921B3B8133640674 /* Pods_7_Days_Challenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		D718B5D4243C26CD00F29481 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		D718B5D8243C390300F29481 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeInfoViewController.swift; sourceTree = "<group>"; };
+		D7C7A886243D7EA700E154FD /* ChallengeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				92AAE96E24388B7E00EC0611 /* LaunchScreen.storyboard */,
 				92AAE97124388B7E00EC0611 /* Info.plist */,
 				D718B5D4243C26CD00F29481 /* Challenge.swift */,
+				D7C7A886243D7EA700E154FD /* ChallengeTableViewCell.swift */,
 			);
 			path = "7 Days Challenge";
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				92AAE97A243898B700EC0611 /* ProfileView.swift in Sources */,
 				92AAE96624388B7C00EC0611 /* SceneDelegate.swift in Sources */,
 				D72DF0012439FADE00ECA0DB /* ChallengeInfoViewController.swift in Sources */,
+				D7C7A887243D7EA700E154FD /* ChallengeTableViewCell.swift in Sources */,
 				92AAE97824388D6600EC0611 /* HomeViewController.swift in Sources */,
 				D718B5D5243C26CD00F29481 /* Challenge.swift in Sources */,
 			);

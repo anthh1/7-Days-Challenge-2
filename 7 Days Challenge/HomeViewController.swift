@@ -36,11 +36,13 @@ class HomeViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "challengeCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "challengeCell", for: indexPath) as! ChallengeTableViewCell
         let challenge = challenges[indexPath.row]
         
-        cell.textLabel?.text = challenge.challengeName
-        cell.detailTextLabel?.text = "\(challenge.challengeScore)"
+        cell.challengeNameLbl.text = challenge.challengeName
+        cell.challengeScoreLbl.text = "Score : \(challenge.challengeScore)"
+        cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
+        
         return cell
     }
     
