@@ -223,6 +223,10 @@
                         <viewLayoutGuide key="safeArea" id="10t-WJ-NhK"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Q1H-Zg-hkV"/>
+                    <connections>
+                        <outlet property="imageProfile" destination="FWb-S6-yri" id="VBE-GI-CYL"/>
+                        <outlet property="labelScore" destination="LUh-fl-QbB" id="4oP-2q-bbo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCq-Py-Gmv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

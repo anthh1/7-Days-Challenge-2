@@ -10,6 +10,9 @@ import UIKit
 
 class ProfileView: UIViewController {
 
+    @IBOutlet var imageProfile: UIImageView!
+    @IBOutlet var labelScore: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
