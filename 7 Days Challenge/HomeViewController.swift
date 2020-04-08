@@ -10,20 +10,18 @@ import UIKit
 
 class HomeViewController: UITableViewController {
 
-    let challenges = [
-       Challenge(challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: ""),
-       Challenge(challengeName: "Sit Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: ""),
-       Challenge(challengeName: "Plank", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: ""),
-       Challenge(challengeName: "Jumping", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: ""),
-       Challenge(challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: ""),
-       Challenge(challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: ""),
-       Challenge(challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: "")
-
+    var challenges = [
+        Challenge(challengeID: 1,challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: ""),
+        Challenge(challengeID: 2, challengeName: "Sit Up", challengeDay: 2, challengeScore: 200, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: ""),
+        Challenge(challengeID: 3, challengeName: "Plank", challengeDay: 3, challengeScore: 300, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: ""),
+        Challenge(challengeID: 4, challengeName: "Jumping", challengeDay: 4, challengeScore: 400, challengeMinReps: 14, challengeObjects: "Kursi", challengeDesc: ""),
+        Challenge(challengeID: 5, challengeName: "Push Up", challengeDay: 5, challengeScore: 500, challengeMinReps: 16, challengeObjects: "Kursi", challengeDesc: ""),
+        Challenge(challengeID: 6, challengeName: "Push Up", challengeDay: 6, challengeScore: 600, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: ""),
+        Challenge(challengeID: 7, challengeName: "Push Up", challengeDay: 7, challengeScore: 700, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

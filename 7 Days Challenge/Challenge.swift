@@ -9,6 +9,7 @@
 import Foundation
 
 struct Challenge {
+    var challengeID: Int
     var challengeName: String
     var challengeDay: Int
     var challengeScore: Int
