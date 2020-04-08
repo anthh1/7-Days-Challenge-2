@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeViewController: UITableViewController {
 
@@ -21,13 +22,75 @@ class HomeViewController: UITableViewController {
     ]
     
     let cellSpacingHeight: CGFloat = 50
+    let currentDate = Date()
+
+    var isChallengeStarted: Bool = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-
+                
+        fetchChallenge()
+        
+        switch isChallengeStarted {
+        case true:
+            print("Challenge telah dimulai")
+        default:
+            startChallenges()
+        }
     }
+    
+    func startChallenges() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "StartChallenge", in: context)
+        let startChallenge = NSManagedObject(entity: entity!, insertInto: context)
+        startChallenge.setValue(currentDate, forKey: "startDate")
+        
+        do {
+           try context.save()
+          } catch {
+           print("Failed saving")
+        }
+    }
+    
+    func deleteAllData(_ entity:String) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            for object in results {
+                guard let objectData = object as? NSManagedObject else {continue}
+                context.delete(objectData)
+            }
+        } catch let error {
+            print("Detele all data in \(entity) error :", error)
+        }
+    }
+    
+    func fetchChallenge() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "StartChallenge")
+        request.returnsObjectsAsFaults = false
+
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                print("\(data.value(forKey: "startDate"))")
+                isChallengeStarted = true
+            }
+            
+        } catch {
+            print("Failed")
+        }
+    }
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -77,6 +140,7 @@ class HomeViewController: UITableViewController {
 
         }
     }
+    
     
 //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //

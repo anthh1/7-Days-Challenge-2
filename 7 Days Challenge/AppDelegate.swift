@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "CoreData")
+        let container = NSPersistentContainer(name: "7DaysChallenge")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -75,5 +75,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+//    func createData() {
+//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+//
+//        let managedContext = appDelegate.persistentContainer.viewContext
+//
+//        let startChallengeEntity = NSEntityDescription.entity(forEntityName: "StartChallenge", in: managedContext)!
+//
+//        for i in 1...5{
+//            let currentDate = Date()
+//
+//            let startChallenge = NSManagedObject(entity: startChallengeEntity, insertInto: managedContext)
+//            startChallenge.setValue(currentDate, forKeyPath: "startDate")
+//        }
+//
+//        do{
+//            try managedContext.save()
+//        }catch let error as NSError{
+//            print("could not save. \(error), \(error.userInfo)")
+//        }
+//    }
+//
+//    func retrieveData() {
+//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+//
+//        let managedContext = appDelegate.persistentContainer.viewContext
+//
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "StartChallenge")
+//
+//        do{
+//            let result = try managedContext.fetch(fetchRequest)
+//            for data in result as! [NSManagedObject]{
+//                print(data.value(forKey: "startDate") as! String)
+//            }
+//
+//        }catch {
+//            print("failed")
+//        }
+//    }
 }
 
