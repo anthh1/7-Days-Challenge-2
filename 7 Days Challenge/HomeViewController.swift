@@ -49,6 +49,10 @@ class HomeViewController: UITableViewController {
         performSegue(withIdentifier: "challengeInfoVC", sender: challenge)
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section \(section)"
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let challengeInfoVC = segue.destination as? ChallengeInfoViewController {
