@@ -15,10 +15,10 @@
 		92AAE97024388B7E00EC0611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92AAE96E24388B7E00EC0611 /* LaunchScreen.storyboard */; };
 		92AAE97824388D6600EC0611 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE97724388D6600EC0611 /* HomeViewController.swift */; };
 		92AAE97A243898B700EC0611 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE979243898B700EC0611 /* ProfileView.swift */; };
-		92AAE97C243898DB00EC0611 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE97B243898DB00EC0611 /* ChallengeView.swift */; };
 		92AAE97E24389A2200EC0611 /* AchievementModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE97D24389A2200EC0611 /* AchievementModal.swift */; };
 		B7ACABA0243D7D820094ECB1 /* reward.json in Resources */ = {isa = PBXBuildFile; fileRef = B7ACAB9F243D7D810094ECB1 /* reward.json */; };
 		C2A72A03243D73A700892591 /* YourVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A72A02243D73A700892591 /* YourVideos.swift */; };
+		D717235F243EBDCA00BEDCE0 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D717235E243EBDCA00BEDCE0 /* VideoTableViewCell.swift */; };
 		D718B5D5243C26CD00F29481 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718B5D4243C26CD00F29481 /* Challenge.swift */; };
 		D718B5D9243C390300F29481 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D718B5D8243C390300F29481 /* .gitignore */; };
 		D72DF0012439FADE00ECA0DB /* ChallengeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */; };
@@ -41,10 +41,10 @@
 		92AAE97124388B7E00EC0611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92AAE97724388D6600EC0611 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		92AAE979243898B700EC0611 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		92AAE97B243898DB00EC0611 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		92AAE97D24389A2200EC0611 /* AchievementModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModal.swift; sourceTree = "<group>"; };
 		B7ACAB9F243D7D810094ECB1 /* reward.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = reward.json; path = "7 Days Challenge/LottieAnimation/reward.json"; sourceTree = SOURCE_ROOT; };
 		C2A72A02243D73A700892591 /* YourVideos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourVideos.swift; sourceTree = "<group>"; };
+		D717235E243EBDCA00BEDCE0 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		D718B5D4243C26CD00F29481 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		D718B5D8243C390300F29481 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeInfoViewController.swift; sourceTree = "<group>"; };
@@ -139,11 +139,11 @@
 				92AAE96724388B7C00EC0611 /* ViewController.swift */,
 				92AAE97724388D6600EC0611 /* HomeViewController.swift */,
 				D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */,
-				92AAE97B243898DB00EC0611 /* ChallengeView.swift */,
 				92AAE979243898B700EC0611 /* ProfileView.swift */,
 				92AAE97D24389A2200EC0611 /* AchievementModal.swift */,
 				C2A72A02243D73A700892591 /* YourVideos.swift */,
 				D7C7A886243D7EA700E154FD /* ChallengeTableViewCell.swift */,
+				D717235E243EBDCA00BEDCE0 /* VideoTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -278,10 +278,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				92AAE97E24389A2200EC0611 /* AchievementModal.swift in Sources */,
+				D717235F243EBDCA00BEDCE0 /* VideoTableViewCell.swift in Sources */,
 				92AAE96824388B7C00EC0611 /* ViewController.swift in Sources */,
 				C2A72A03243D73A700892591 /* YourVideos.swift in Sources */,
 				92AAE96424388B7C00EC0611 /* AppDelegate.swift in Sources */,
-				92AAE97C243898DB00EC0611 /* ChallengeView.swift in Sources */,
 				92AAE97A243898B700EC0611 /* ProfileView.swift in Sources */,
 				92AAE96624388B7C00EC0611 /* SceneDelegate.swift in Sources */,
 				D72DF0012439FADE00ECA0DB /* ChallengeInfoViewController.swift in Sources */,
