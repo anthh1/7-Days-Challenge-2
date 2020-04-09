@@ -439,7 +439,7 @@
                                         <rect key="frame" x="0.0" y="2" width="414" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                        <state key="normal" image="thumbnailVideo">
+                                        <state key="normal" image="thumb">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                         </state>
                                         <connections>
@@ -488,6 +488,6 @@
     <resources>
         <image name="Let's Go Button" width="218" height="66"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="thumbnailVideo" width="414" height="400"/>
+        <image name="thumb" width="414" height="300"/>
     </resources>
 </document>
