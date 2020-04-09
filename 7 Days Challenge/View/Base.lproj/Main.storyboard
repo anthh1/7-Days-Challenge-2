@@ -353,10 +353,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tqB-lq-sxD">
-                                <rect key="frame" x="87" y="239" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Challenge Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJH-ri-SNa">
                                 <rect key="frame" x="113" y="166" width="188" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -395,6 +391,11 @@
                                     <action selector="btnDoChallenge:" destination="sf2-OH-swf" eventType="touchUpInside" id="Cml-De-0DE"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lxf-jW-pHv">
+                                <rect key="frame" x="20" y="241" width="374" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="59c-fw-m5M"/>
@@ -405,6 +406,7 @@
                         <outlet property="descriptionLbl" destination="iOT-2z-aUS" id="qPV-4L-nJy"/>
                         <outlet property="minRepsLbl" destination="LGg-lc-1P5" id="oBC-HS-2DJ"/>
                         <outlet property="objectLbl" destination="S4h-qT-AGE" id="pCE-tm-kb4"/>
+                        <outlet property="videoView" destination="Lxf-jW-pHv" id="HXV-rF-u81"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUx-Fz-L3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
