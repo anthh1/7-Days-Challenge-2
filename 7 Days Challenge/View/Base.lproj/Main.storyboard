@@ -95,7 +95,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                     </subviews>
                                     <constraints>
@@ -118,7 +118,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="8xG-lb-Rtr">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="cgB-on-dTg"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="cgB-on-dTg">
+                            <connections>
+                                <segue destination="csV-2l-Wu6" kind="show" id="OPC-ow-miQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="sf2-OH-swf" kind="show" identifier="challengeInfoVC" id="ckq-ne-lAy"/>
@@ -247,7 +251,7 @@
             <objects>
                 <tableViewController id="LNM-xK-ihx" customClass="YourVideos" customModule="__Days_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EZ4-JB-NIc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -276,7 +280,7 @@
             <objects>
                 <viewController id="zTf-hh-52s" customClass="AchievementModal" customModule="__Days_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OlK-hE-8yG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You've got the" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPW-I1-9eo">

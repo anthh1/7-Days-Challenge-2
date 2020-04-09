@@ -30,6 +30,7 @@ class HomeViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.setHidesBackButton(true, animated: true);
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
         let today: String
