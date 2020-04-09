@@ -439,7 +439,7 @@
                                         <rect key="frame" x="0.0" y="2" width="414" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                        <state key="normal" image="IMG_0503">
+                                        <state key="normal" image="thumbnailVideo">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                         </state>
                                         <connections>
@@ -486,8 +486,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_0503" width="1980" height="3520"/>
         <image name="Let's Go Button" width="218" height="66"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="thumbnailVideo" width="414" height="400"/>
     </resources>
 </document>
