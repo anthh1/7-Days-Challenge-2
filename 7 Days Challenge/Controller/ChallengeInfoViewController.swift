@@ -11,6 +11,7 @@ import MobileCoreServices
 
 class ChallengeInfoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
+    @IBOutlet weak var videoView: VideoView!
     @IBOutlet weak var challengeNameLbl: UILabel!
     @IBOutlet weak var minRepsLbl: UILabel!
     @IBOutlet weak var objectLbl: UILabel!
@@ -21,6 +22,10 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        videoView.configure(url: <#T##String#>)
+        videoView.play()
+        videoView.isLoop = true
     }
     
     

@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  7 Days Challenge
 //
-//  Created by Anthony Angkasa on 04/04/20.
+//  Created by Calvin Leonardo on 04/04/20.
 //  Copyright © 2020 Mini Challenge 1 - G19. All rights reserved.
 //
 
