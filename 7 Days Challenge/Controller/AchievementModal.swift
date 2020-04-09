@@ -17,17 +17,17 @@ class AchievementModal: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-               setupAnimation()
+                setupAnimation()
            }
 
            private func setupAnimation(){
-               animationView.animation = Animation.named("reward")
-            animationView.frame = lottieView.frame
-               animationView.backgroundColor = .white
-               animationView.contentMode = .scaleAspectFit
-               animationView.loopMode = .loop
-               animationView.play()
-               view.addSubview(animationView)
+                animationView.animation = Animation.named("reward")
+                animationView.frame = lottieView.frame
+                animationView.backgroundColor = .white
+                animationView.contentMode = .scaleAspectFit
+                animationView.loopMode = .loop
+                animationView.play()
+                view.addSubview(animationView)
            }
         // Do any additional setup after loading the view.
     }
