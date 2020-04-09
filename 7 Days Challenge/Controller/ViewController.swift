@@ -37,18 +37,19 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         slide1.labelDescription.text = "7 Days Challenge"
         
         let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide1.labelTitle.text = "Welcome To"
+        slide2.labelTitle.text = ""
         slide2.labelDescription.text = "There's still a bunch of activities we can do during our WFH"
+        slide2.frame = CGRect(x:0, y: 0, width: slide2.frame.width, height: 1000)
         
         let slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide1.labelTitle.text = "Welcome To"
+        slide3.labelTitle.text = ""
         slide3.labelDescription.text = "Doing exercise is also good. So, why dont you give it a try?"
         
         return [slide1, slide2, slide3]
     }
     func setupSlideScrollView(slides : [Slide]) {
     scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-    scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
+    scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height - 500)
     scrollView.isPagingEnabled = true
     
     for i in 0 ..< slides.count {
