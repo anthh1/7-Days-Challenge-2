@@ -16,33 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="FTZ-Vz-3fg">
-                                <rect key="frame" x="114" y="704" width="186" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.3294117647" green="0.2470588235" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="08r-Y4-6h6">
                                 <rect key="frame" x="0.0" y="88" width="425" height="808"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRM-zG-ga2">
-                                        <rect key="frame" x="119" y="678" width="186" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.3294117647" green="0.2470588235" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Let's Go"/>
-                                        <connections>
-                                            <segue destination="5hC-7s-g5h" kind="show" id="GvM-0C-dGj"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="hOs-hN-9e6"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="NgZ-9N-gQm"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRM-zG-ga2">
+                                <rect key="frame" x="98" y="755" width="218" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.3294117647" green="0.2470588235" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="Let's Go Button"/>
+                                <connections>
+                                    <segue destination="5hC-7s-g5h" kind="show" id="yWZ-dJ-Mt3"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="FTZ-Vz-3fg">
+                                <rect key="frame" x="114" y="714" width="186" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="cnC-lj-Lr5"/>
+                    <connections>
+                        <outlet property="goButton" destination="BRM-zG-ga2" id="j7g-4V-eyw"/>
+                        <outlet property="pageControl" destination="FTZ-Vz-3fg" id="wf0-L3-5ch"/>
+                        <outlet property="scrollView" destination="08r-Y4-6h6" id="5Rp-wc-LZl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -431,6 +433,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Let's Go Button" width="218" height="66"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
 </document>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92704E3B243EBF880005AA0A /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92704E3A243EBF880005AA0A /* Slide.swift */; };
+		92704E3D243EBFB20005AA0A /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92704E3C243EBFB20005AA0A /* Slide.xib */; };
 		92AAE96424388B7C00EC0611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE96324388B7C00EC0611 /* AppDelegate.swift */; };
 		92AAE96624388B7C00EC0611 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE96524388B7C00EC0611 /* SceneDelegate.swift */; };
 		92AAE96824388B7C00EC0611 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE96724388B7C00EC0611 /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 		1900C48DB9C1BE58437AAD2A /* Pods-7 Days Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-7 Days Challenge.release.xcconfig"; path = "Target Support Files/Pods-7 Days Challenge/Pods-7 Days Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		5D0A0E39970A5A0049AAAA5F /* Pods-7 Days Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-7 Days Challenge.debug.xcconfig"; path = "Target Support Files/Pods-7 Days Challenge/Pods-7 Days Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		86065F57921B3B8133640674 /* Pods_7_Days_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_7_Days_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92704E3A243EBF880005AA0A /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Slide.swift; path = "7 Days Challenge/Model/Slide.swift"; sourceTree = SOURCE_ROOT; };
+		92704E3C243EBFB20005AA0A /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		92AAE96024388B7C00EC0611 /* 7 Days Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "7 Days Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AAE96324388B7C00EC0611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92AAE96524388B7C00EC0611 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				D718B5D4243C26CD00F29481 /* Challenge.swift */,
+				92704E3A243EBF880005AA0A /* Slide.swift */,
 				D7C7A8BD243DDB8000E154FD /* 7DaysChallenge.xcdatamodeld */,
 			);
 			path = Model;
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				92AAE96924388B7C00EC0611 /* Main.storyboard */,
+				92704E3C243EBFB20005AA0A /* Slide.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 				92AAE96D24388B7E00EC0611 /* Assets.xcassets in Resources */,
 				92AAE96B24388B7C00EC0611 /* Main.storyboard in Resources */,
 				B7ACABA0243D7D820094ECB1 /* reward.json in Resources */,
+				92704E3D243EBFB20005AA0A /* Slide.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +292,7 @@
 				92AAE97A243898B700EC0611 /* ProfileView.swift in Sources */,
 				92AAE96624388B7C00EC0611 /* SceneDelegate.swift in Sources */,
 				D72DF0012439FADE00ECA0DB /* ChallengeInfoViewController.swift in Sources */,
+				92704E3B243EBF880005AA0A /* Slide.swift in Sources */,
 				D7C7A887243D7EA700E154FD /* ChallengeTableViewCell.swift in Sources */,
 				92AAE97824388D6600EC0611 /* HomeViewController.swift in Sources */,
 				D7C7A8BF243DDB8000E154FD /* 7DaysChallenge.xcdatamodeld in Sources */,
