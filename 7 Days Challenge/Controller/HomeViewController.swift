@@ -12,18 +12,19 @@ import CoreData
 class HomeViewController: UITableViewController {
 
     var challenges = [
-        Challenge(challengeID: 1,challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: ""),
-        Challenge(challengeID: 2, challengeName: "Sit Up", challengeDay: 2, challengeScore: 200, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: ""),
-        Challenge(challengeID: 3, challengeName: "Plank", challengeDay: 3, challengeScore: 300, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: ""),
-        Challenge(challengeID: 4, challengeName: "Jumping", challengeDay: 4, challengeScore: 400, challengeMinReps: 14, challengeObjects: "Kursi", challengeDesc: ""),
-        Challenge(challengeID: 5, challengeName: "Push Up", challengeDay: 5, challengeScore: 500, challengeMinReps: 16, challengeObjects: "Kursi", challengeDesc: ""),
-        Challenge(challengeID: 6, challengeName: "Push Up", challengeDay: 6, challengeScore: 600, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: ""),
-        Challenge(challengeID: 7, challengeName: "Push Up", challengeDay: 7, challengeScore: 700, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "")
+        Challenge(challengeID: 1,challengeName: "Naik Tangga 2 steps at a time", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: "", challengeDate: ""),
+        Challenge(challengeID: 2, challengeName: "Burpees, 180 degrees 3 steps ", challengeDay: 2, challengeScore: 200, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "", challengeDate: ""),
+        Challenge(challengeID: 3, challengeName: "Bench or chair, step up, push up, tricep dips ", challengeDay: 3, challengeScore: 300, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: "", challengeDate: ""),
+        Challenge(challengeID: 4, challengeName: "Yoga mat reverse plank , bridges", challengeDay: 4, challengeScore: 400, challengeMinReps: 14, challengeObjects: "Kursi", challengeDesc: "",challengeDate: ""),
+        Challenge(challengeID: 5, challengeName: "Cartwheel, hand stand ", challengeDay: 5, challengeScore: 500, challengeMinReps: 16, challengeObjects: "Kursi", challengeDesc: "",challengeDate: ""),
+        Challenge(challengeID: 6, challengeName: "Partner one leg game, avoiding the stick ", challengeDay: 6, challengeScore: 600, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: "",challengeDate: ""),
+        Challenge(challengeID: 7, challengeName: "Farmers carry , gas tank, aqua galon, or small jerry can , jerigen", challengeDay: 7, challengeScore: 700, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "",challengeDate: "")
     ]
     
+    var dayCount = 0
     var challengeDates = [String]()
     
-    let cellSpacingHeight: CGFloat = 50
+    var cellSpacingHeight: CGFloat = 50
     var selectedIndex = Int()
 
 
@@ -35,9 +36,14 @@ class HomeViewController: UITableViewController {
         
         let today: String
         
+        startChallenges()
+        compareChallenges()
+
         let dateFormatter = DateFormatter()
-        dateFormatter.setLocalizedDateFormatFromTemplate("d")
+        dateFormatter.setLocalizedDateFormatFromTemplate("dd")
         today = dateFormatter.string(from: Date())
+        
+        print(today)
         
         let searchValue = today
         var currentIndex = 0
@@ -46,15 +52,12 @@ class HomeViewController: UITableViewController {
         {
             if challengeDate != searchValue {
                 fetchChallenge()
-                startChallenges()
-
                 break
             }
             currentIndex += 1
         }
         
 //        deleteAllData("StartChallenge")
-//
 //        startChallenges()
     }
     
@@ -67,11 +70,36 @@ class HomeViewController: UITableViewController {
         let currentDate: String
 
         let dateFormatter = DateFormatter()
-        dateFormatter.setLocalizedDateFormatFromTemplate("d")
+        dateFormatter.setLocalizedDateFormatFromTemplate("dd")
         currentDate = dateFormatter.string(from: Date())
         
-        startChallenge.setValue(currentDate, forKey: "challengeDate")
         
+        startChallenge.setValue(currentDate, forKey: "challengeDate")
+        print("saved")
+        
+        do {
+           try context.save()
+          } catch {
+           print("Failed saving")
+        }
+    }
+    
+    func compareChallenges() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "StartChallenge", in: context)
+        let compareChallenge = NSManagedObject(entity: entity!, insertInto: context)
+        
+        let currentDate: String
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.setLocalizedDateFormatFromTemplate("dd")
+        currentDate = dateFormatter.string(from: Date())
+        
+        compareChallenge.setValue(currentDate, forKey: "compareDate")
+        
+        print("compare")
+
         do {
            try context.save()
           } catch {
@@ -143,7 +171,7 @@ class HomeViewController: UITableViewController {
             return 1
         }
         else{
-            return challenges.count-1
+            return challenges.count
         }
     }
     
@@ -155,17 +183,34 @@ class HomeViewController: UITableViewController {
             cell.challengeNameLbl.text = challenge.challengeName
             cell.challengeScoreLbl.text = "Score : \(challenge.challengeScore)"
             cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
+            
         }else if (indexPath.section == 1){
-            let challenge = challenges[3]
-            cell.challengeNameLbl.text = challenge.challengeName
-            cell.challengeScoreLbl.text = "Score : \(challenge.challengeScore)"
-            cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
+            let challenge = challenges[indexPath.row]
+            if(challenge.challengeID == 1){
+
+            } else {
+                cell.challengeNameLbl.text = challenge.challengeName
+                cell.challengeScoreLbl.text = "Score : \(challenge.challengeScore)"
+                cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
+            }
         }
-        
-        
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView,
+                            heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if (indexPath.section == 1) {
+            let challenge = challenges[indexPath.row]
+            if(challenge.challengeID == 1){
+                return 0
+            } else {
+              
+            }
+        }
+        return tableView.rowHeight
+    }
+    
      
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return cellSpacingHeight

@@ -30,10 +30,6 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
         setLabel()
         
         
-//        videoView.configure(url: "")
-//        videoView.play()
-//        videoView.isLoop = true
-        
     }
     
     func setLabel() {

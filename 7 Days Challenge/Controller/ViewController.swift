@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
@@ -28,7 +29,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
        pageControl.numberOfPages = slides.count
        pageControl.currentPage = 0
         view.bringSubviewToFront(pageControl)
-    
     }
     func createSlides() -> [Slide] {
 

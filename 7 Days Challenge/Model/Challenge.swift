@@ -16,5 +16,5 @@ struct Challenge {
     var challengeMinReps: Int
     var challengeObjects: String
     var challengeDesc: String
-    
+    var challengeDate: String
 }

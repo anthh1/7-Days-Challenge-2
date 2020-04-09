@@ -17,6 +17,8 @@ class ChallengeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        challengeNameLbl.numberOfLines = 0
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -24,6 +26,7 @@ class ChallengeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
 
