@@ -11,6 +11,8 @@ import UIKit
 class Slide: UIView {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var welcomeTitle: UILabel!
     
     /*
     // Only override draw() if you perform custom drawing.

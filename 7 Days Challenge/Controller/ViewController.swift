@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        goButton.layer.cornerRadius = 30
+        goButton.layer.cornerRadius = 35
         
         scrollView.delegate = self
         
@@ -33,17 +33,23 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func createSlides() -> [Slide] {
 
         let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide1.labelTitle.text = "Welcome To"
+        slide1.welcomeTitle.text = "Welcome To"
+        slide1.imageView.image = UIImage (named: "img1")
+        slide1.labelTitle.text = ""
         slide1.labelDescription.text = "7 Days Challenge"
         
         let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide2.labelTitle.text = ""
-        slide2.labelDescription.text = "There's still a bunch of activities we can do during our WFH"
+        slide2.welcomeTitle.text = ""
+        slide2.imageView.image = UIImage (named: "img2")
+        slide2.labelTitle.text = "There's still a bunch of activities we can do during our WFH"
+        slide2.labelDescription.text = ""
         slide2.frame = CGRect(x:0, y: 0, width: slide2.frame.width, height: 1000)
         
         let slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide3.labelTitle.text = ""
-        slide3.labelDescription.text = "Doing exercise is also good. So, why dont you give it a try?"
+        slide3.welcomeTitle.text = ""
+        slide3.imageView.image = UIImage (named: "img3")
+        slide3.labelTitle.text = "Doing exercise is also good. So, why dont you give it a try?"
+        slide3.labelDescription.text = ""
         
         return [slide1, slide2, slide3]
     }
