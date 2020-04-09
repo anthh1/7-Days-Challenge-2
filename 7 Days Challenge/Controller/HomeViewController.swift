@@ -25,32 +25,32 @@ class HomeViewController: UITableViewController {
     
     let cellSpacingHeight: CGFloat = 50
 
-    var currentDate: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.setLocalizedDateFormatFromTemplate("d")
-        currentDate = dateFormatter.string(from: Date())
-        
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
-        let searchValue = currentDate
+        let today: String
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.setLocalizedDateFormatFromTemplate("d")
+        today = dateFormatter.string(from: Date())
+        
+        let searchValue = today
         var currentIndex = 0
 
         for challengeDate in challengeDates
         {
             if challengeDate != searchValue {
-                print("Found \(challengeDate) for index \(currentIndex)")
+                fetchChallenge()
                 startChallenges()
+
                 break
             }
             currentIndex += 1
         }
         
-        fetchChallenge()
-//
 //        deleteAllData("StartChallenge")
 //
 //        startChallenges()
@@ -61,6 +61,13 @@ class HomeViewController: UITableViewController {
         let context = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "StartChallenge", in: context)
         let startChallenge = NSManagedObject(entity: entity!, insertInto: context)
+        
+        let currentDate: String
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.setLocalizedDateFormatFromTemplate("d")
+        currentDate = dateFormatter.string(from: Date())
+        
         startChallenge.setValue(currentDate, forKey: "challengeDate")
         
         do {
