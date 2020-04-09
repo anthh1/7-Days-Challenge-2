@@ -17,15 +17,27 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     @IBOutlet weak var objectLbl: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
     
+    var challengeName = ""
+    var challengeDesc = ""
+    
+    
     var controller = UIImagePickerController()
     let videoFileName = "/video.mp4"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        videoView.configure(url: <#T##String#>)
-        videoView.play()
-        videoView.isLoop = true
+        setLabel()
+        
+        
+//        videoView.configure(url: "")
+//        videoView.play()
+//        videoView.isLoop = true
+        
+    }
+    
+    func setLabel() {
+        challengeNameLbl.text = challengeName
     }
     
     

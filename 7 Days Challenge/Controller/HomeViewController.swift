@@ -24,6 +24,7 @@ class HomeViewController: UITableViewController {
     var challengeDates = [String]()
     
     let cellSpacingHeight: CGFloat = 50
+    var selectedIndex = Int()
 
 
     override func viewDidLoad() {
@@ -161,6 +162,7 @@ class HomeViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedIndex = indexPath.row
         let challenge = challenges[indexPath.row]
         performSegue(withIdentifier: "challengeInfoVC", sender: challenge)
     }
@@ -176,8 +178,13 @@ class HomeViewController: UITableViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let challengeInfoVC = segue.destination as? ChallengeInfoViewController {
+        
+        if segue.identifier == "challengeInfoVC" {
+            let vc : ChallengeInfoViewController = segue.destination as! ChallengeInfoViewController
+            let challenge = challenges[selectedIndex]
 
+            vc.challengeName = challenge.challengeName
+            print(selectedIndex)
         }
     }
     
