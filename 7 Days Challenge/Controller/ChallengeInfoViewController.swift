@@ -33,23 +33,18 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     
     var challengeName = ""
     var challengeDesc = ""
-    
-    
+
     var controller = UIImagePickerController()
     let videoFileName = "/video.mp4"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setLabel()
-        
-        
     }
     
     func setLabel() {
         challengeNameLbl.text = challengeName
     }
-    
     
     @IBAction func btnDoChallenge(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
