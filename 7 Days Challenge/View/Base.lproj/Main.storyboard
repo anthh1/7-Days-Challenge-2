@@ -23,16 +23,18 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="NgZ-9N-gQm"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRM-zG-ga2">
-                                <rect key="frame" x="98" y="755" width="218" height="66"/>
+                                <rect key="frame" x="94" y="759" width="226" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.3294117647" green="0.2470588235" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="Let's Go Button"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="LET'S GO"/>
                                 <connections>
                                     <segue destination="5hC-7s-g5h" kind="show" id="yWZ-dJ-Mt3"/>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="FTZ-Vz-3fg">
-                                <rect key="frame" x="114" y="714" width="186" height="37"/>
+                                <rect key="frame" x="114" y="708" width="186" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" red="0.33100762989999999" green="0.2465271832" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -468,7 +470,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Let's Go Button" width="218" height="66"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
 </document>
