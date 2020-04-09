@@ -22,6 +22,7 @@
 		C2A72A03243D73A700892591 /* YourVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A72A02243D73A700892591 /* YourVideos.swift */; };
 		D717235F243EBDCA00BEDCE0 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D717235E243EBDCA00BEDCE0 /* VideoTableViewCell.swift */; };
 		D7172361243EC0A400BEDCE0 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7172360243EC0A400BEDCE0 /* VideoView.swift */; };
+		D7172366243F12C600BEDCE0 /* IMG_0447.MOV in Resources */ = {isa = PBXBuildFile; fileRef = D7172365243F12C600BEDCE0 /* IMG_0447.MOV */; };
 		D718B5D5243C26CD00F29481 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718B5D4243C26CD00F29481 /* Challenge.swift */; };
 		D718B5D9243C390300F29481 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D718B5D8243C390300F29481 /* .gitignore */; };
 		D72DF0012439FADE00ECA0DB /* ChallengeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */; };
@@ -51,6 +52,7 @@
 		C2A72A02243D73A700892591 /* YourVideos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourVideos.swift; sourceTree = "<group>"; };
 		D717235E243EBDCA00BEDCE0 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		D7172360243EC0A400BEDCE0 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		D7172365243F12C600BEDCE0 /* IMG_0447.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = IMG_0447.MOV; sourceTree = "<group>"; };
 		D718B5D4243C26CD00F29481 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		D718B5D8243C390300F29481 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeInfoViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		92AAE95724388B7C00EC0611 = {
 			isa = PBXGroup;
 			children = (
+				D7172365243F12C600BEDCE0 /* IMG_0447.MOV */,
 				D718B5D8243C390300F29481 /* .gitignore */,
 				92AAE96224388B7C00EC0611 /* 7 Days Challenge */,
 				92AAE96124388B7C00EC0611 /* Products */,
@@ -232,6 +235,7 @@
 				D718B5D9243C390300F29481 /* .gitignore in Resources */,
 				92AAE97024388B7E00EC0611 /* LaunchScreen.storyboard in Resources */,
 				92AAE96D24388B7E00EC0611 /* Assets.xcassets in Resources */,
+				D7172366243F12C600BEDCE0 /* IMG_0447.MOV in Resources */,
 				92AAE96B24388B7C00EC0611 /* Main.storyboard in Resources */,
 				B7ACABA0243D7D820094ECB1 /* reward.json in Resources */,
 				92704E3D243EBFB20005AA0A /* Slide.xib in Resources */,

@@ -434,6 +434,19 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kmX-D0-ahu">
                                 <rect key="frame" x="0.0" y="88" width="414" height="305"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7V-83-ZDm">
+                                        <rect key="frame" x="0.0" y="2" width="414" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                        <state key="normal" image="IMG_0503">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startVideo:" destination="sf2-OH-swf" eventType="touchUpInside" id="iw3-LO-Fio"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
@@ -446,6 +459,7 @@
                         <outlet property="descriptionLbl" destination="iOT-2z-aUS" id="qPV-4L-nJy"/>
                         <outlet property="minRepsLbl" destination="LGg-lc-1P5" id="oBC-HS-2DJ"/>
                         <outlet property="objectLbl" destination="S4h-qT-AGE" id="pCE-tm-kb4"/>
+                        <outlet property="startBtn" destination="R7V-83-ZDm" id="AMP-0s-aav"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUx-Fz-L3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -472,6 +486,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="IMG_0503" width="1980" height="3520"/>
         <image name="Let's Go Button" width="218" height="66"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
