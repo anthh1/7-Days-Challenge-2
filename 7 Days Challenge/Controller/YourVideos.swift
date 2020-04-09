@@ -8,8 +8,9 @@
 
 import UIKit
 import AVFoundation
+import MobileCoreServices
 
-class YourVideos: UITableViewController {
+class YourVideos: UITableViewController, UIImagePickerControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()

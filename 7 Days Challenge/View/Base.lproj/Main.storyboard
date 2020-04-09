@@ -449,6 +449,7 @@
                         <outlet property="descriptionLbl" destination="iOT-2z-aUS" id="qPV-4L-nJy"/>
                         <outlet property="minRepsLbl" destination="LGg-lc-1P5" id="oBC-HS-2DJ"/>
                         <outlet property="objectLbl" destination="S4h-qT-AGE" id="pCE-tm-kb4"/>
+                        <segue destination="csV-2l-Wu6" kind="show" identifier="challengeDone" id="R3H-yy-ams"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUx-Fz-L3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -474,6 +475,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="R3H-yy-ams"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

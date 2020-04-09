@@ -85,6 +85,7 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
         } else {
            DispatchQueue.main.async(execute: { () -> Void in
            })
+            performSegue(withIdentifier: "challengeDone", sender: self)
         }
     }
 }
