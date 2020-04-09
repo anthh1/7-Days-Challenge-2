@@ -8,6 +8,7 @@
 
 import UIKit
 import MobileCoreServices
+import AVKit
 
 class ChallengeInfoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
@@ -16,6 +17,19 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     @IBOutlet weak var minRepsLbl: UILabel!
     @IBOutlet weak var objectLbl: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
+    @IBOutlet weak var startBtn: UIButton!
+    
+    @IBAction func startVideo(_ sender: Any) {
+        if let path = Bundle.main.path(forResource: "IMG_0447", ofType: "MOV"){
+            let video = AVPlayer(url: URL(fileURLWithPath: path))
+            let videoPlayer = AVPlayerViewController()
+            videoPlayer.player = video
+            
+            present(videoPlayer, animated: true, completion: {
+                video.play()
+            })
+        }
+    }
     
     var challengeName = ""
     var challengeDesc = ""
@@ -29,10 +43,6 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
         
         setLabel()
         
-        
-//        videoView.configure(url: "")
-//        videoView.play()
-//        videoView.isLoop = true
         
     }
     
