@@ -25,6 +25,7 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
         
         videoView.configure(url: <#T##String#>)
         videoView.play()
+        videoView.isLoop = true
     }
     
     
