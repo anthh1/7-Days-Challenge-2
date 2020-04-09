@@ -142,17 +142,26 @@ class HomeViewController: UITableViewController {
             return 1
         }
         else{
-            return challenges.count
+            return challenges.count-1
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "challengeCell", for: indexPath) as! ChallengeTableViewCell
-        let challenge = challenges[indexPath.row]
         
-        cell.challengeNameLbl.text = challenge.challengeName
-        cell.challengeScoreLbl.text = "Score : \(challenge.challengeScore)"
-        cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
+        if(indexPath.section == 0){
+            let challenge = challenges[indexPath.row]
+            cell.challengeNameLbl.text = challenge.challengeName
+            cell.challengeScoreLbl.text = "Score : \(challenge.challengeScore)"
+            cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
+        }else if (indexPath.section == 1){
+            let challenge = challenges[3]
+            cell.challengeNameLbl.text = challenge.challengeName
+            cell.challengeScoreLbl.text = "Score : \(challenge.challengeScore)"
+            cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
+        }
+        
+        
         
         return cell
     }
