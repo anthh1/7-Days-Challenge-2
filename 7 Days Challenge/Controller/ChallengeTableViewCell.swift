@@ -13,11 +13,14 @@ class ChallengeTableViewCell: UITableViewCell {
     @IBOutlet weak var challengeDayLbl: UILabel!
     @IBOutlet weak var challengeNameLbl: UILabel!
     @IBOutlet weak var challengeScoreLbl: UILabel!
+    @IBOutlet weak var bgTable: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         challengeNameLbl.numberOfLines = 0
+        bgTable.layer.cornerRadius = 30
+
 
     }
 
@@ -30,6 +33,6 @@ class ChallengeTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
     }
 }

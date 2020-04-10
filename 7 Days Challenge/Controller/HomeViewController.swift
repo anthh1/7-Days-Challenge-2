@@ -27,7 +27,6 @@ class HomeViewController: UITableViewController {
     var cellSpacingHeight: CGFloat = 50
     var selectedIndex = Int()
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
