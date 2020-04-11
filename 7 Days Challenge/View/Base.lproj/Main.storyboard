@@ -54,14 +54,15 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Good Morning-->
         <scene sceneID="EUk-kS-dqG">
             <objects>
                 <tableViewController id="5hC-7s-g5h" customClass="HomeViewController" customModule="__Days_Challenge" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="178" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dGc-qK-m0v">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="178" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dGc-qK-m0v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.1058823529" green="0.01176470588" blue="0.63921568630000003" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="challengeCell" id="dXe-2i-q90" customClass="ChallengeTableViewCell" customModule="__Days_Challenge" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="178"/>
@@ -118,7 +119,8 @@
                             <outlet property="delegate" destination="5hC-7s-g5h" id="v9v-yQ-a1X"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8xG-lb-Rtr">
+                    <navigationItem key="navigationItem" title="Good Morning" id="8xG-lb-Rtr">
+                        <barButtonItem key="backBarButtonItem" title="Challenges" id="40z-Ol-RiQ"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="cgB-on-dTg">
                             <connections>
                                 <segue destination="csV-2l-Wu6" kind="show" id="OPC-ow-miQ"/>
@@ -412,7 +414,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcP-re-PXC">
-                                        <rect key="frame" x="0.0" y="8" width="414" height="300"/>
+                                        <rect key="frame" x="0.0" y="3" width="414" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="thumb"/>
                                         <connections>
@@ -479,7 +481,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OPC-ow-miQ"/>
+        <segue reference="R3H-yy-ams"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>

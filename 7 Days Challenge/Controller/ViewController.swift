@@ -14,6 +14,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var goButton: UIButton!
     
+    override func viewWillAppear(_ animated: Bool) {
+  
+    }
     
     var slides:[Slide] = [];
     override func viewDidLoad() {

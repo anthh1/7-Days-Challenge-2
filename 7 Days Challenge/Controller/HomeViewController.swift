@@ -26,7 +26,7 @@ class HomeViewController: UITableViewController {
     
     var cellSpacingHeight: CGFloat = 50
     var selectedIndex = Int()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,7 +71,6 @@ class HomeViewController: UITableViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.setLocalizedDateFormatFromTemplate("dd")
         currentDate = dateFormatter.string(from: Date())
-        
         
         startChallenge.setValue(currentDate, forKey: "challengeDate")
         print("saved")
@@ -222,6 +221,7 @@ class HomeViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
         if section == 0 {
             return "Today's Challenge"
         } else {
@@ -230,6 +230,9 @@ class HomeViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        tableView.tableHeaderView?.backgroundColor = UIColor.blue
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -262,6 +265,9 @@ class HomeViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
 
 }
 
@@ -270,3 +276,4 @@ extension Date {
            return Calendar.current.dateComponents([.weekday], from: self).weekday
        }
 }
+
