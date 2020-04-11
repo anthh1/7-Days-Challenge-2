@@ -27,6 +27,10 @@ class HomeViewController: UITableViewController {
     var cellSpacingHeight: CGFloat = 50
     var selectedIndex = Int()
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

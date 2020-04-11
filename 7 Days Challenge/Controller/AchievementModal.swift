@@ -16,6 +16,8 @@ class AchievementModal: UIViewController {
      let animationView = AnimationView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .never
+
         // Do any additional setup after loading the view.
                 setupAnimation()
            }

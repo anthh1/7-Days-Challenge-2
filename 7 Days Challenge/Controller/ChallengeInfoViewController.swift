@@ -39,6 +39,8 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .never
+
         setLabel()
     }
     

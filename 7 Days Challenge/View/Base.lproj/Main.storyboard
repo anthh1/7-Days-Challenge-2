@@ -120,7 +120,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Good Morning" id="8xG-lb-Rtr">
-                        <barButtonItem key="backBarButtonItem" title="Challenges" id="40z-Ol-RiQ"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="40z-Ol-RiQ"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="cgB-on-dTg">
                             <connections>
                                 <segue destination="csV-2l-Wu6" kind="show" id="OPC-ow-miQ"/>
