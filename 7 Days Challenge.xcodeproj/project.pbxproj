@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -208,7 +208,7 @@
 				};
 			};
 			buildConfigurationList = 92AAE95B24388B7C00EC0611 /* Build configuration list for PBXProject "7 Days Challenge" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -449,6 +449,7 @@
 			baseConfigurationReference = 5D0A0E39970A5A0049AAAA5F /* Pods-7 Days Challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94AQ28YXX2;
 				INFOPLIST_FILE = "7 Days Challenge/Info.plist";
@@ -459,6 +460,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "AppleDevAcademyBinus.--Days-Challenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -469,6 +471,7 @@
 			baseConfigurationReference = 1900C48DB9C1BE58437AAD2A /* Pods-7 Days Challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94AQ28YXX2;
 				INFOPLIST_FILE = "7 Days Challenge/Info.plist";
@@ -479,6 +482,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "AppleDevAcademyBinus.--Days-Challenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
