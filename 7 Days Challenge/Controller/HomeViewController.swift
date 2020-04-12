@@ -183,7 +183,7 @@ class HomeViewController: UITableViewController {
         if(indexPath.section == 0){
             let challenge = challenges[indexPath.row]
             cell.challengeNameLbl.text = challenge.challengeName
-            cell.challengeScoreLbl.text = "Score : \(challenge.challengeScore)"
+            cell.challengeScoreLbl.text = "\(challenge.challengeScore) pts"
             cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
             
         }else if (indexPath.section == 1){
@@ -192,7 +192,7 @@ class HomeViewController: UITableViewController {
 
             } else {
                 cell.challengeNameLbl.text = challenge.challengeName
-                cell.challengeScoreLbl.text = "Score : \(challenge.challengeScore)"
+                cell.challengeScoreLbl.text = "\(challenge.challengeScore) pts"
                 cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
             }
         }
