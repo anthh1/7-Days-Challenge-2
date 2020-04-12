@@ -120,9 +120,12 @@ class HomeViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedIndex = indexPath.row
-        let challenge = challenges[indexPath.row]
-        performSegue(withIdentifier: "challengeInfoVC", sender: challenge)
+        
+        if (indexPath.section == 0){
+            self.selectedIndex = indexPath.row
+            let challenge = challenges[indexPath.row]
+            performSegue(withIdentifier: "challengeInfoVC", sender: challenge)
+        }
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

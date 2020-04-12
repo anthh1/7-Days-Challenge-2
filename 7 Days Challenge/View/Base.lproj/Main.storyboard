@@ -278,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCq-Py-Gmv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786.9565217391305" y="949.55357142857133"/>
+            <point key="canvasLocation" x="1801" y="952"/>
         </scene>
         <!--Your Videos-->
         <scene sceneID="PCR-XQ-MMD">
