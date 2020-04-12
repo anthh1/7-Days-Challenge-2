@@ -22,7 +22,7 @@ class AchievementCollectionViewCell: UICollectionViewCell {
         if let achievement = achievement {
             achievementImgView.image = achievement.achievementImg
         } else {
-        
+            print("")
         }
     }
 }

@@ -16,8 +16,6 @@ class ProfileView: UIViewController {
     
     var achievements = Achievement.fetchAchievement()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
@@ -54,7 +52,6 @@ extension ProfileView: UICollectionViewDataSource, UICollectionViewDelegate{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AchievementCollectionViewCell", for: indexPath) as! AchievementCollectionViewCell
             
         let achievement = achievements[indexPath.item]
-        
         cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
         
         cell.achievement = achievement
@@ -69,7 +66,6 @@ extension ProfileView: UICollectionViewDataSource, UICollectionViewDelegate{
        if let tempIndex = indexPath {
           print("Got clicked on index: \(tempIndex)!")
         
-           
        }
 
         
