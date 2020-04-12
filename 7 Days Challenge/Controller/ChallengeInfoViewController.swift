@@ -62,17 +62,18 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+      
         if let selectedVideo:URL = (info[UIImagePickerController.InfoKey.mediaURL] as? URL) {
+            let alert = UIAlertController(title: "Submit Video", message: "Are you sure you want to submit it to gallery?", preferredStyle: .alert)
             let selectorToCall = #selector(videoSaved(_:didFinishSavingWithError:context:))
             UISaveVideoAtPathToSavedPhotosAlbum(selectedVideo.relativePath, self, selectorToCall, nil)
             let videoData = try? Data(contentsOf: selectedVideo)
             let paths = NSSearchPathForDirectoriesInDomains(
-                FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+                    FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
             let documentsDirectory: URL = URL(fileURLWithPath: paths[0])
             let dataPath = documentsDirectory.appendingPathComponent(videoFileName)
             try! videoData?.write(to: dataPath, options: [])
         }
-      
         picker.dismiss(animated: true)
     }
     
@@ -86,3 +87,4 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
         }
     }
 }
+ 
