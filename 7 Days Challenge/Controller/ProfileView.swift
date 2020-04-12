@@ -25,19 +25,7 @@ class ProfileView: UIViewController {
 
                
         // Do any additional setup after loading the view.
-                setupAnimation()
-           }
-
-           private func setupAnimation(){
-                animationView.animation = Animation.named("reward")
-                animationView.frame = lottieView.frame
-                animationView.backgroundColor = .white
-                animationView.contentMode = .scaleAspectFit
-                animationView.loopMode = .loop
-                animationView.play()
-                view.addSubview(animationView)
-           }
-    
+    }
 
     /*
     // MARK: - Navigation
