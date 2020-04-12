@@ -45,6 +45,7 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
         navigationItem.largeTitleDisplayMode = .never
         self.title = "Day \(challengeDay)"
 
+        startBtn.layer.cornerRadius = 30
         setLabel()
     }
     
