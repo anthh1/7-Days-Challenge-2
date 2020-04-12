@@ -10,7 +10,7 @@ import UIKit
 
 class AchievementCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var achievementImgView: UIImageView!
+    @IBOutlet weak var achievementImg: UIImageView!
     
     var achievement: Achievement! {
         didSet {
@@ -20,7 +20,7 @@ class AchievementCollectionViewCell: UICollectionViewCell {
     
     func updateUI() {
         if let achievement = achievement {
-            achievementImgView.image = achievement.achievementImg
+            achievementImg.image = achievement.achievementImg
         } else {
             print("")
         }

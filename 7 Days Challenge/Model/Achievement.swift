@@ -20,9 +20,16 @@ class Achievement {
     
     static func fetchAchievement() -> [Achievement]{
         return[
-            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "b1")!),
-            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "b1")!),
-            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "b1")!),
+            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "dummy")!),
+            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "dummy")!),
+            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "dummy")!),
+            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "dummy")!),
+            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "dummy")!),
+            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "dummy")!),
+            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "dummy")!),
+            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "dummy")!),
+            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "dummy")!),
+
 
         ]
         

@@ -13,7 +13,7 @@ class ProfileView: UIViewController {
     @IBOutlet weak var achievementCollectionView: UICollectionView!
     @IBOutlet var imageProfile: UIImageView!
     @IBOutlet var labelScore: UILabel!
-    @IBOutlet var lottieView: UIView!
+//    @IBOutlet var lottieView: UIView!
     
     var achievements = Achievement.fetchAchievement()
     
