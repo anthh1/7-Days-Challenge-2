@@ -19,6 +19,8 @@
 		92AAE97A243898B700EC0611 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE979243898B700EC0611 /* ProfileView.swift */; };
 		92AAE97E24389A2200EC0611 /* AchievementModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAE97D24389A2200EC0611 /* AchievementModal.swift */; };
 		B7ACABA0243D7D820094ECB1 /* reward.json in Resources */ = {isa = PBXBuildFile; fileRef = B7ACAB9F243D7D810094ECB1 /* reward.json */; };
+		B7DE53E4244367B800483194 /* heartbox.json in Resources */ = {isa = PBXBuildFile; fileRef = B7DE53E3244367B800483194 /* heartbox.json */; };
+		B7DE53E6244367BD00483194 /* 7day-streak.json in Resources */ = {isa = PBXBuildFile; fileRef = B7DE53E5244367BD00483194 /* 7day-streak.json */; };
 		C2A72A03243D73A700892591 /* YourVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A72A02243D73A700892591 /* YourVideos.swift */; };
 		D717235F243EBDCA00BEDCE0 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D717235E243EBDCA00BEDCE0 /* VideoTableViewCell.swift */; };
 		D7172361243EC0A400BEDCE0 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7172360243EC0A400BEDCE0 /* VideoView.swift */; };
@@ -51,6 +53,8 @@
 		92AAE979243898B700EC0611 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		92AAE97D24389A2200EC0611 /* AchievementModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModal.swift; sourceTree = "<group>"; };
 		B7ACAB9F243D7D810094ECB1 /* reward.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = reward.json; path = "7 Days Challenge/LottieAnimation/reward.json"; sourceTree = SOURCE_ROOT; };
+		B7DE53E3244367B800483194 /* heartbox.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heartbox.json; sourceTree = "<group>"; };
+		B7DE53E5244367BD00483194 /* 7day-streak.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "7day-streak.json"; sourceTree = "<group>"; };
 		C2A72A02243D73A700892591 /* YourVideos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourVideos.swift; sourceTree = "<group>"; };
 		D717235E243EBDCA00BEDCE0 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		D7172360243EC0A400BEDCE0 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 		D7C7A8BC243DD65100E154FD /* LottieAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				B7DE53E3244367B800483194 /* heartbox.json */,
+				B7DE53E5244367BD00483194 /* 7day-streak.json */,
 				B7ACAB9F243D7D810094ECB1 /* reward.json */,
 			);
 			path = LottieAnimation;
@@ -238,8 +244,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7DE53E6244367BD00483194 /* 7day-streak.json in Resources */,
 				D718B5D9243C390300F29481 /* .gitignore in Resources */,
 				92AAE97024388B7E00EC0611 /* LaunchScreen.storyboard in Resources */,
+				B7DE53E4244367B800483194 /* heartbox.json in Resources */,
 				92AAE96D24388B7E00EC0611 /* Assets.xcassets in Resources */,
 				D7172366243F12C600BEDCE0 /* IMG_0447.MOV in Resources */,
 				92AAE96B24388B7C00EC0611 /* Main.storyboard in Resources */,
@@ -459,7 +467,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JY65WKMSCH;
+				DEVELOPMENT_TEAM = 94AQ28YXX2;
 				INFOPLIST_FILE = "7 Days Challenge/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -481,7 +489,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JY65WKMSCH;
+				DEVELOPMENT_TEAM = 94AQ28YXX2;
 				INFOPLIST_FILE = "7 Days Challenge/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
