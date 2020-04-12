@@ -13,6 +13,7 @@ class AchievementModal: UIViewController {
 
     @IBOutlet var lottieView: UIView!
     
+    
     var animationName = ""
     
     

@@ -21,6 +21,7 @@
 		B7ACABA0243D7D820094ECB1 /* reward.json in Resources */ = {isa = PBXBuildFile; fileRef = B7ACAB9F243D7D810094ECB1 /* reward.json */; };
 		B7DE53E4244367B800483194 /* heartbox.json in Resources */ = {isa = PBXBuildFile; fileRef = B7DE53E3244367B800483194 /* heartbox.json */; };
 		B7DE53E6244367BD00483194 /* 7day-streak.json in Resources */ = {isa = PBXBuildFile; fileRef = B7DE53E5244367BD00483194 /* 7day-streak.json */; };
+		B7DE53E8244376C300483194 /* well-done.json in Resources */ = {isa = PBXBuildFile; fileRef = B7DE53E7244376C300483194 /* well-done.json */; };
 		C2A72A03243D73A700892591 /* YourVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A72A02243D73A700892591 /* YourVideos.swift */; };
 		D717235F243EBDCA00BEDCE0 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D717235E243EBDCA00BEDCE0 /* VideoTableViewCell.swift */; };
 		D7172361243EC0A400BEDCE0 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7172360243EC0A400BEDCE0 /* VideoView.swift */; };
@@ -55,6 +56,7 @@
 		B7ACAB9F243D7D810094ECB1 /* reward.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = reward.json; path = "7 Days Challenge/LottieAnimation/reward.json"; sourceTree = SOURCE_ROOT; };
 		B7DE53E3244367B800483194 /* heartbox.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heartbox.json; sourceTree = "<group>"; };
 		B7DE53E5244367BD00483194 /* 7day-streak.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "7day-streak.json"; sourceTree = "<group>"; };
+		B7DE53E7244376C300483194 /* well-done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "well-done.json"; sourceTree = "<group>"; };
 		C2A72A02243D73A700892591 /* YourVideos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourVideos.swift; sourceTree = "<group>"; };
 		D717235E243EBDCA00BEDCE0 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		D7172360243EC0A400BEDCE0 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		D7C7A8BC243DD65100E154FD /* LottieAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				B7DE53E7244376C300483194 /* well-done.json */,
 				B7DE53E3244367B800483194 /* heartbox.json */,
 				B7DE53E5244367BD00483194 /* 7day-streak.json */,
 				B7ACAB9F243D7D810094ECB1 /* reward.json */,
@@ -253,6 +256,7 @@
 				92AAE96B24388B7C00EC0611 /* Main.storyboard in Resources */,
 				B7ACABA0243D7D820094ECB1 /* reward.json in Resources */,
 				92704E3D243EBFB20005AA0A /* Slide.xib in Resources */,
+				B7DE53E8244376C300483194 /* well-done.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
