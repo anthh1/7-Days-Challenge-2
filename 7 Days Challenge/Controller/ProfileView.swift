@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Lottie
 class ProfileView: UIViewController {
 
     @IBOutlet var imageProfile: UIImageView!
