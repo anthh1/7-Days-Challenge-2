@@ -93,13 +93,13 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
         } else {
            DispatchQueue.main.async(execute: { () -> Void in
            })
-            performSegue(withIdentifier: "challengeDone", sender: self)
-            
             currentScore = UserDefaults.standard.integer(forKey: "Score")
             newScore = challengeScore + currentScore
             UserDefaults.standard.set(newScore, forKey: "Score")
-            
-            print(UserDefaults.standard.integer(forKey: "Score"))
+            if UserDefaults.standard.integer(forKey: "Unlock") == 0 {
+                UserDefaults.standard.set(1, forKey: "Unlock")
+            }
+            performSegue(withIdentifier: "challengeDone", sender: self)
         }
     }
 }

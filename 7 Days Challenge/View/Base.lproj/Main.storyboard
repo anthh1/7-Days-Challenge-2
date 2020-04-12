@@ -375,6 +375,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Achievement" id="KU1-AG-R9U"/>
                     <connections>
+                        <outlet property="animationTitleLbl" destination="Xdb-BY-49L" id="trE-ei-SKv"/>
                         <outlet property="lottieView" destination="bv9-jn-Wed" id="ZkE-MS-mAy"/>
                     </connections>
                 </viewController>

@@ -13,6 +13,10 @@ class AchievementModal: UIViewController {
 
     @IBOutlet var lottieView: UIView!
     
+    @IBOutlet weak var animationTitleLbl: UILabel!
+    var animationTitle = ""
+    
+    
     
     var animationName = ""
     
@@ -22,9 +26,10 @@ class AchievementModal: UIViewController {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
 
+        animationTitleLbl.text = animationTitle
         // Do any additional setup after loading the view.
                 setupAnimation()
-           }
+    }
 
            private func setupAnimation(){
                 animationView.animation = Animation.named(animationName)

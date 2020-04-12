@@ -13,52 +13,37 @@ class ProfileView: UIViewController {
     @IBOutlet weak var achievementCollectionView: UICollectionView!
     @IBOutlet var imageProfile: UIImageView!
     @IBOutlet var labelScore: UILabel!
-//    @IBOutlet var lottieView: UIView!
-    
+        
     var achievements = Achievement.fetchAchievement()
-    
+    var startCode = 0
+    var animationJSON = ""
+    var animationName = ""
+    var achievementUnlock = UserDefaults.standard.integer(forKey: "Unlock")
+                  
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
-
         achievementCollectionView.dataSource = self
 
+        if achievementUnlock >= 1 {
+            for n in 0...achievementUnlock {
+                achievements[n-1].enable = true
+            }
+        }
+       
         labelScore.text = "Score: \(UserDefaults.standard.integer(forKey: "Score"))"
-        // Do any additional setup after loading the view.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
         func startSegue(startCode: Int) {
-            print(startCode)
-            
-            switch startCode {
-            case 1:
-                print("")
-            case 2:
-                print("")
-            case 3:
-                print("")
-            case 4:
-                print("")
-            default:
-                print("")
-            }
             performSegue(withIdentifier: "achievementSegue", sender: self)
-
         }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AchievementModal {
-
+            destination.animationName = animationJSON
+            destination.animationTitle = animationName
+            
         }
     }
 }
@@ -79,6 +64,13 @@ extension ProfileView: UICollectionViewDataSource, UICollectionViewDelegate{
         cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
         
         cell.achievement = achievement
+        
+        if achievement.enable == false{
+            cell.contentView.isHidden = true
+        }
+        else {
+            cell.contentView.isHidden = false
+        }
         return cell
     }
     
@@ -86,10 +78,13 @@ extension ProfileView: UICollectionViewDataSource, UICollectionViewDelegate{
 
        let location = sender.location(in: self.achievementCollectionView)
        let indexPath = self.achievementCollectionView.indexPathForItem(at: location)
-        
+
        if let tempIndex = indexPath {
           print("Got clicked on index: \(tempIndex)!")
-        
+        let achievement = achievements[tempIndex.item]
+        animationJSON = achievement.achievementJSON
+        animationName = achievement.achievementName
+
             if tempIndex == [0, 0] {
                 startSegue(startCode: 1)
             }
