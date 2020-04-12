@@ -168,7 +168,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tbp-dX-4TH">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoCollectionViewCell" id="tbp-dX-4TH">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="omF-Al-7hl">
@@ -190,14 +190,28 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Qdg-QG-oXh">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AchievementCVCell" id="Qdg-QG-oXh" customClass="AchievementCollectionViewCell" customModule="__Days_Challenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dib-4L-A4Q">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8UC-c2-Xaq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="8UC-c2-Xaq" secondAttribute="trailing" id="0yQ-z9-Ytp"/>
+                                                <constraint firstItem="8UC-c2-Xaq" firstAttribute="top" secondItem="dib-4L-A4Q" secondAttribute="top" id="1xw-tZ-odF"/>
+                                                <constraint firstAttribute="bottom" secondItem="8UC-c2-Xaq" secondAttribute="bottom" id="Bz2-pY-9xb"/>
+                                                <constraint firstItem="8UC-c2-Xaq" firstAttribute="leading" secondItem="dib-4L-A4Q" secondAttribute="leading" id="xsE-YY-UbD"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="achievementImg" destination="8UC-c2-Xaq" id="2D2-Ha-MrS"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -242,6 +256,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Q1H-Zg-hkV"/>
                     <connections>
+                        <outlet property="achievementCollectionView" destination="SuW-a4-nao" id="7te-UC-FyE"/>
                         <outlet property="imageProfile" destination="FWb-S6-yri" id="VBE-GI-CYL"/>
                         <outlet property="labelScore" destination="LUh-fl-QbB" id="4oP-2q-bbo"/>
                     </connections>

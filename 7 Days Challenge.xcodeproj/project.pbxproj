@@ -26,6 +26,8 @@
 		D718B5D5243C26CD00F29481 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718B5D4243C26CD00F29481 /* Challenge.swift */; };
 		D718B5D9243C390300F29481 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D718B5D8243C390300F29481 /* .gitignore */; };
 		D72DF0012439FADE00ECA0DB /* ChallengeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */; };
+		D73C5F25244302DD000C591F /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73C5F24244302DD000C591F /* Achievement.swift */; };
+		D73C5F29244306A1000C591F /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73C5F28244306A1000C591F /* AchievementCollectionViewCell.swift */; };
 		D7C7A887243D7EA700E154FD /* ChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7A886243D7EA700E154FD /* ChallengeTableViewCell.swift */; };
 		D7C7A8BF243DDB8000E154FD /* 7DaysChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7C7A8BD243DDB8000E154FD /* 7DaysChallenge.xcdatamodeld */; };
 		EB802424F9C89C415EA801EB /* Pods_7_Days_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86065F57921B3B8133640674 /* Pods_7_Days_Challenge.framework */; };
@@ -56,6 +58,8 @@
 		D718B5D4243C26CD00F29481 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		D718B5D8243C390300F29481 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeInfoViewController.swift; sourceTree = "<group>"; };
+		D73C5F24244302DD000C591F /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		D73C5F28244306A1000C591F /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
 		D7C7A886243D7EA700E154FD /* ChallengeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeTableViewCell.swift; sourceTree = "<group>"; };
 		D7C7A8BE243DDB8000E154FD /* 7DaysChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 7DaysChallenge.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +135,7 @@
 				D718B5D4243C26CD00F29481 /* Challenge.swift */,
 				92704E3A243EBF880005AA0A /* Slide.swift */,
 				D7C7A8BD243DDB8000E154FD /* 7DaysChallenge.xcdatamodeld */,
+				D73C5F24244302DD000C591F /* Achievement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 				D7C7A886243D7EA700E154FD /* ChallengeTableViewCell.swift */,
 				D717235E243EBDCA00BEDCE0 /* VideoTableViewCell.swift */,
 				D7172360243EC0A400BEDCE0 /* VideoView.swift */,
+				D73C5F28244306A1000C591F /* AchievementCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,6 +311,8 @@
 				D7C7A8BF243DDB8000E154FD /* 7DaysChallenge.xcdatamodeld in Sources */,
 				D718B5D5243C26CD00F29481 /* Challenge.swift in Sources */,
 				D7172361243EC0A400BEDCE0 /* VideoView.swift in Sources */,
+				D73C5F29244306A1000C591F /* AchievementCollectionViewCell.swift in Sources */,
+				D73C5F25244302DD000C591F /* Achievement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
