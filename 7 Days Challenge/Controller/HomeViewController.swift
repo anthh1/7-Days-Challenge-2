@@ -12,13 +12,13 @@ import CoreData
 class HomeViewController: UITableViewController {
 
     var challenges = [
-        Challenge(challengeID: 1,challengeName: "Naik Tangga 2 steps at a time", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: "", challengeDate: ""),
-        Challenge(challengeID: 2, challengeName: "Burpees, 180 degrees 3 steps ", challengeDay: 2, challengeScore: 200, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "", challengeDate: ""),
-        Challenge(challengeID: 3, challengeName: "Bench or chair, step up, push up, tricep dips ", challengeDay: 3, challengeScore: 300, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: "", challengeDate: ""),
-        Challenge(challengeID: 4, challengeName: "Yoga mat reverse plank , bridges", challengeDay: 4, challengeScore: 400, challengeMinReps: 14, challengeObjects: "Kursi", challengeDesc: "",challengeDate: ""),
-        Challenge(challengeID: 5, challengeName: "Cartwheel, hand stand ", challengeDay: 5, challengeScore: 500, challengeMinReps: 16, challengeObjects: "Kursi", challengeDesc: "",challengeDate: ""),
-        Challenge(challengeID: 6, challengeName: "Partner one leg game, avoiding the stick ", challengeDay: 6, challengeScore: 600, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: "",challengeDate: ""),
-        Challenge(challengeID: 7, challengeName: "Farmers carry , gas tank, aqua galon, or small jerry can , jerigen", challengeDay: 7, challengeScore: 700, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "",challengeDate: "")
+        Challenge(challengeID: 1,challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: "", challengeDate: ""),
+        Challenge(challengeID: 2, challengeName: "Burpees", challengeDay: 2, challengeScore: 200, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "", challengeDate: ""),
+        Challenge(challengeID: 3, challengeName: "3 Steps 180", challengeDay: 3, challengeScore: 300, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: "", challengeDate: ""),
+        Challenge(challengeID: 4, challengeName: "Plank", challengeDay: 4, challengeScore: 400, challengeMinReps: 14, challengeObjects: "Kursi", challengeDesc: "",challengeDate: ""),
+        Challenge(challengeID: 5, challengeName: "Bench Dip", challengeDay: 5, challengeScore: 500, challengeMinReps: 16, challengeObjects: "Kursi", challengeDesc: "",challengeDate: ""),
+        Challenge(challengeID: 6, challengeName: "Walk Up Stairs", challengeDay: 6, challengeScore: 600, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: "",challengeDate: ""),
+        Challenge(challengeID: 7, challengeName: "Wall Handstand", challengeDay: 7, challengeScore: 700, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "",challengeDate: "")
     ]
     
     var dayCount = 0
@@ -182,7 +182,7 @@ class HomeViewController: UITableViewController {
         if(indexPath.section == 0){
             let challenge = challenges[indexPath.row]
             cell.challengeNameLbl.text = challenge.challengeName
-            cell.challengeScoreLbl.text = "Score : \(challenge.challengeScore)"
+            cell.challengeScoreLbl.text = "\(challenge.challengeScore) pts"
             cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
             
         }else if (indexPath.section == 1){
@@ -191,7 +191,7 @@ class HomeViewController: UITableViewController {
 
             } else {
                 cell.challengeNameLbl.text = challenge.challengeName
-                cell.challengeScoreLbl.text = "Score : \(challenge.challengeScore)"
+                cell.challengeScoreLbl.text = "\(challenge.challengeScore) pts"
                 cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
             }
         }
