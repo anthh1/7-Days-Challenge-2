@@ -16,6 +16,7 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     @IBOutlet weak var challengeNameLbl: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var startBtn: UIButton!
+    @IBOutlet weak var startChallengeBtn: UIButton!
     @IBOutlet weak var challengeScoreLbl: UILabel!
     
     @IBAction func startVideo(_ sender: Any) {
@@ -44,8 +45,8 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         self.title = "Day \(challengeDay)"
-
-        startBtn.layer.cornerRadius = 30
+        startChallengeBtn.layer.cornerRadius = 35
+        
         setLabel()
     }
     

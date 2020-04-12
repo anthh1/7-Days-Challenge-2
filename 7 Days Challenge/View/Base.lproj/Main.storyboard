@@ -506,6 +506,7 @@
                         <outlet property="challengeScoreLbl" destination="rgY-jr-HZ0" id="gNL-aT-AcD"/>
                         <outlet property="descriptionLbl" destination="iOT-2z-aUS" id="qPV-4L-nJy"/>
                         <outlet property="startBtn" destination="VcP-re-PXC" id="BxO-k5-LJB"/>
+                        <outlet property="startChallengeBtn" destination="wtW-GG-xhO" id="NBn-Pm-EO4"/>
                         <outlet property="videoInfoThumbnail" destination="VcP-re-PXC" id="Skc-ef-1AS"/>
                         <segue destination="csV-2l-Wu6" kind="show" identifier="challengeDone" id="R3H-yy-ams"/>
                     </connections>
