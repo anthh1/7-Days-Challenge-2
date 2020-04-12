@@ -141,7 +141,6 @@ class HomeViewController: UITableViewController {
                 print(challengeDates.count)
                 print(challengeDates)
             }
-            
         } catch {
             print("Failed")
         }
@@ -196,7 +195,6 @@ class HomeViewController: UITableViewController {
                 cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
             }
         }
-        
         return cell
     }
     
@@ -243,8 +241,11 @@ class HomeViewController: UITableViewController {
         if segue.identifier == "challengeInfoVC" {
             let vc : ChallengeInfoViewController = segue.destination as! ChallengeInfoViewController
             let challenge = challenges[selectedIndex]
-
+            
+            vc.challengeDay = challenge.challengeDay
             vc.challengeName = challenge.challengeName
+            vc.challengeDesc = challenge.challengeDesc
+            vc.challengeScore = challenge.challengeScore
             print(selectedIndex)
         }
     }

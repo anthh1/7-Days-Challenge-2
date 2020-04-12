@@ -12,12 +12,11 @@ import AVKit
 
 class ChallengeInfoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
-    @IBOutlet weak var videoView: VideoView!
+    @IBOutlet weak var videoInfoThumbnail: UIButton!
     @IBOutlet weak var challengeNameLbl: UILabel!
-    @IBOutlet weak var minRepsLbl: UILabel!
-    @IBOutlet weak var objectLbl: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var startBtn: UIButton!
+    @IBOutlet weak var challengeScoreLbl: UILabel!
     
     @IBAction func startVideo(_ sender: Any) {
         if let path = Bundle.main.path(forResource: "IMG_0447", ofType: "MOV"){
@@ -31,21 +30,29 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
         }
     }
     
+    var challengeDay = 0
     var challengeName = ""
     var challengeDesc = ""
-
+    var challengeScore = 100
+    var newScore = 0
+    var currentScore = 0
+    
     var controller = UIImagePickerController()
     let videoFileName = "/video.mp4"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
+        self.title = "Day \(challengeDay)"
 
         setLabel()
     }
     
     func setLabel() {
         challengeNameLbl.text = challengeName
+        descriptionLbl.text = challengeDesc
+        challengeScoreLbl.text = "\(challengeScore) pts"
+        
     }
     
     @IBAction func btnDoChallenge(_ sender: Any) {
@@ -64,7 +71,7 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
       
         if let selectedVideo:URL = (info[UIImagePickerController.InfoKey.mediaURL] as? URL) {
-            let alert = UIAlertController(title: "Submit Video", message: "Are you sure you want to submit it to gallery?", preferredStyle: .alert)
+//            let alert = UIAlertController(title: "Submit Video", message: "Are you sure you want to submit it to gallery?", preferredStyle: .alert)
             let selectorToCall = #selector(videoSaved(_:didFinishSavingWithError:context:))
             UISaveVideoAtPathToSavedPhotosAlbum(selectedVideo.relativePath, self, selectorToCall, nil)
             let videoData = try? Data(contentsOf: selectedVideo)
@@ -84,6 +91,12 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
            DispatchQueue.main.async(execute: { () -> Void in
            })
             performSegue(withIdentifier: "challengeDone", sender: self)
+            
+            currentScore = UserDefaults.standard.integer(forKey: "Score")
+            newScore = challengeScore + currentScore
+            UserDefaults.standard.set(newScore, forKey: "Score")
+            
+            print(UserDefaults.standard.integer(forKey: "Score"))
         }
     }
 }

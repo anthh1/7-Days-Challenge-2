@@ -249,7 +249,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUh-fl-QbB">
-                                <rect key="frame" x="165" y="153" width="67" height="31"/>
+                                <rect key="frame" x="165" y="153" width="162" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -454,7 +454,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="at8-CJ-YcS">
-                                <rect key="frame" x="32" y="509" width="168" height="21"/>
+                                <rect key="frame" x="32" y="509" width="351" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
@@ -503,8 +503,10 @@
                     <navigationItem key="navigationItem" title="Day 1" id="PMO-VX-j9w"/>
                     <connections>
                         <outlet property="challengeNameLbl" destination="oJH-ri-SNa" id="YxW-6i-gX7"/>
+                        <outlet property="challengeScoreLbl" destination="rgY-jr-HZ0" id="gNL-aT-AcD"/>
                         <outlet property="descriptionLbl" destination="iOT-2z-aUS" id="qPV-4L-nJy"/>
                         <outlet property="startBtn" destination="VcP-re-PXC" id="BxO-k5-LJB"/>
+                        <outlet property="videoInfoThumbnail" destination="VcP-re-PXC" id="Skc-ef-1AS"/>
                         <segue destination="csV-2l-Wu6" kind="show" identifier="challengeDone" id="R3H-yy-ams"/>
                     </connections>
                 </viewController>
@@ -532,7 +534,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OPC-ow-miQ"/>
+        <segue reference="R3H-yy-ams"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
