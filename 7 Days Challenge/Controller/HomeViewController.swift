@@ -12,13 +12,13 @@ import CoreData
 class HomeViewController: UITableViewController {
 
     var challenges = [
-        Challenge(challengeID: 1,challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: "", challengeDate: ""),
-        Challenge(challengeID: 2, challengeName: "Burpees", challengeDay: 2, challengeScore: 200, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "", challengeDate: ""),
-        Challenge(challengeID: 3, challengeName: "3 Steps 180", challengeDay: 3, challengeScore: 300, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: "", challengeDate: ""),
-        Challenge(challengeID: 4, challengeName: "Plank", challengeDay: 4, challengeScore: 400, challengeMinReps: 14, challengeObjects: "Kursi", challengeDesc: "",challengeDate: ""),
-        Challenge(challengeID: 5, challengeName: "Bench Dip", challengeDay: 5, challengeScore: 500, challengeMinReps: 16, challengeObjects: "Kursi", challengeDesc: "",challengeDate: ""),
-        Challenge(challengeID: 6, challengeName: "Walk Up Stairs", challengeDay: 6, challengeScore: 600, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: "",challengeDate: ""),
-        Challenge(challengeID: 7, challengeName: "Wall Handstand", challengeDay: 7, challengeScore: 700, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "",challengeDate: "")
+        Challenge(challengeID: 1,challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: "", challengeDate: "", challengeImage: "pushup"),
+        Challenge(challengeID: 2, challengeName: "Burpees", challengeDay: 2, challengeScore: 200, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "", challengeDate: "", challengeImage: "burpees"),
+        Challenge(challengeID: 3, challengeName: "3 Steps 180", challengeDay: 3, challengeScore: 300, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: "", challengeDate: "", challengeImage: "steps180"),
+        Challenge(challengeID: 4, challengeName: "Plank", challengeDay: 4, challengeScore: 400, challengeMinReps: 14, challengeObjects: "Kursi", challengeDesc: "",challengeDate: "", challengeImage: "plank"),
+        Challenge(challengeID: 5, challengeName: "Bench Dip", challengeDay: 5, challengeScore: 500, challengeMinReps: 16, challengeObjects: "Kursi", challengeDesc: "",challengeDate: "", challengeImage: "benchDip"),
+        Challenge(challengeID: 6, challengeName: "Walk Up Stairs", challengeDay: 6, challengeScore: 600, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: "",challengeDate: "", challengeImage: "walkStairs"),
+        Challenge(challengeID: 7, challengeName: "Wall Handstand", challengeDay: 7, challengeScore: 700, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "",challengeDate: "", challengeImage: "wallHandstand")
     ]
     
     var dayCount = UserDefaults.standard.integer(forKey: "dayCount")
@@ -83,6 +83,7 @@ class HomeViewController: UITableViewController {
             cell.challengeNameLbl.text = challenge.challengeName
             cell.challengeScoreLbl.text = "\(challenge.challengeScore) pts"
             cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
+            cell.challengeImageBg.image = UIImage(named: "\(challenge.challengeImage)")
             
         }else if (indexPath.section == 1){
             let challenge = challenges[indexPath.row]
@@ -90,6 +91,12 @@ class HomeViewController: UITableViewController {
             cell.challengeNameLbl.text = challenge.challengeName
             cell.challengeScoreLbl.text = "\(challenge.challengeScore) pts"
             cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
+            
+            cell.challengeNameLbl.text = challenge.challengeName
+            cell.challengeScoreLbl.text = "\(challenge.challengeScore) pts"
+            cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
+            cell.challengeImageBg.image = UIImage(named: "\(challenge.challengeImage)")
+
         }
         return cell
     }
