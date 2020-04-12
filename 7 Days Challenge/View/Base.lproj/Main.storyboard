@@ -74,9 +74,13 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5y-7c-ni8">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NDI-iJ-E7z">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NDI-iJ-E7z">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="178" id="C12-Dq-hEq"/>
+                                                        <constraint firstAttribute="width" secondItem="NDI-iJ-E7z" secondAttribute="height" multiplier="207:89" id="f80-yy-YRu"/>
+                                                        <constraint firstAttribute="width" constant="414" id="w8c-df-2XQ"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5J-WR-96M">
                                                     <rect key="frame" x="20" y="13" width="104" height="22"/>
@@ -86,7 +90,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Push-Up" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqe-H3-2Af">
-                                                    <rect key="frame" x="20" y="31" width="201" height="30"/>
+                                                    <rect key="frame" x="20" y="31" width="150" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -105,6 +109,8 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.396078431372549" green="0.94509803921568625" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
+                                                <constraint firstItem="NDI-iJ-E7z" firstAttribute="centerX" secondItem="K5y-7c-ni8" secondAttribute="centerX" id="Xck-Pz-0gL"/>
+                                                <constraint firstItem="NDI-iJ-E7z" firstAttribute="centerY" secondItem="K5y-7c-ni8" secondAttribute="centerY" id="aO7-N6-Ih1"/>
                                                 <constraint firstItem="d1R-mG-tJ3" firstAttribute="leading" secondItem="K5y-7c-ni8" secondAttribute="leading" constant="23" id="n2W-HF-dna"/>
                                                 <constraint firstAttribute="bottom" secondItem="d1R-mG-tJ3" secondAttribute="bottom" constant="16" id="sh4-HS-K39"/>
                                             </constraints>
@@ -120,6 +126,7 @@
                                 <connections>
                                     <outlet property="bgTable" destination="K5y-7c-ni8" id="10q-5y-9UI"/>
                                     <outlet property="challengeDayLbl" destination="H5J-WR-96M" id="kOE-tR-wme"/>
+                                    <outlet property="challengeImageBg" destination="NDI-iJ-E7z" id="rtd-35-VnJ"/>
                                     <outlet property="challengeNameLbl" destination="gqe-H3-2Af" id="h34-9d-Nko"/>
                                     <outlet property="challengeScoreLbl" destination="d1R-mG-tJ3" id="r39-Bd-pqQ"/>
                                 </connections>
@@ -535,7 +542,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="R3H-yy-ams"/>
+        <segue reference="OPC-ow-miQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
