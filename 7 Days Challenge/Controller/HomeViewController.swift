@@ -12,16 +12,16 @@ import CoreData
 class HomeViewController: UITableViewController {
 
     var challenges = [
-        Challenge(challengeID: 1,challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeMinReps: 8, challengeObjects: "Kursi", challengeDesc: "", challengeDate: "", challengeImage: "pushup"),
-        Challenge(challengeID: 2, challengeName: "Burpees", challengeDay: 2, challengeScore: 200, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "", challengeDate: "", challengeImage: "burpees"),
-        Challenge(challengeID: 3, challengeName: "3 Steps 180", challengeDay: 3, challengeScore: 300, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: "", challengeDate: "", challengeImage: "steps180"),
-        Challenge(challengeID: 4, challengeName: "Plank", challengeDay: 4, challengeScore: 400, challengeMinReps: 14, challengeObjects: "Kursi", challengeDesc: "",challengeDate: "", challengeImage: "plank"),
-        Challenge(challengeID: 5, challengeName: "Bench Dip", challengeDay: 5, challengeScore: 500, challengeMinReps: 16, challengeObjects: "Kursi", challengeDesc: "",challengeDate: "", challengeImage: "benchDip"),
-        Challenge(challengeID: 6, challengeName: "Walk Up Stairs", challengeDay: 6, challengeScore: 600, challengeMinReps: 12, challengeObjects: "Kursi", challengeDesc: "",challengeDate: "", challengeImage: "walkStairs"),
-        Challenge(challengeID: 7, challengeName: "Wall Handstand", challengeDay: 7, challengeScore: 700, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "",challengeDate: "", challengeImage: "wallHandstand")
+        Challenge(challengeID: 1,challengeName: "Push Up", challengeDay: 1, challengeScore: 100, challengeDesc: "", challengeImage: "pushup", challengeVideo: "IMG_0447"),
+        Challenge(challengeID: 2, challengeName: "Burpees", challengeDay: 2, challengeScore: 200, challengeDesc: "", challengeImage: "burpees", challengeVideo: "IMG_0447"),
+        Challenge(challengeID: 3, challengeName: "3 Steps 180", challengeDay: 3, challengeScore: 300, challengeDesc: "", challengeImage: "steps180", challengeVideo: "csteps180"),
+        Challenge(challengeID: 4, challengeName: "Plank", challengeDay: 4, challengeScore: 400, challengeDesc: "", challengeImage: "plank", challengeVideo: "IMG_0447"),
+        Challenge(challengeID: 5, challengeName: "Bench Dip", challengeDay: 5, challengeScore: 500, challengeDesc: "", challengeImage: "benchDip", challengeVideo: "cbenchdipp"),
+        Challenge(challengeID: 6, challengeName: "Walk Up Stairs", challengeDay: 6, challengeScore: 600, challengeDesc: "", challengeImage: "walkStairs", challengeVideo: "cwalkupstairs"),
+        Challenge(challengeID: 7, challengeName: "Wall Handstand", challengeDay: 7, challengeScore: 700, challengeDesc: "", challengeImage: "wallHandstand", challengeVideo: "chandstand")
     ]
     
-    var dayCount = UserDefaults.standard.integer(forKey: "dayCount")
+    var dayCount = 5
     var challengeDates = [String]()
     var challengeDay = UserDefaults.standard.integer(forKey: "firstDay")
     
@@ -148,6 +148,7 @@ class HomeViewController: UITableViewController {
             let vc : ChallengeInfoViewController = segue.destination as! ChallengeInfoViewController
             let challenge = challenges[selectedIndex]
             
+            vc.videoFile = challenge.challengeVideo
             vc.challengeDay = challenge.challengeDay
             vc.challengeName = challenge.challengeName
             vc.challengeDesc = challenge.challengeDesc

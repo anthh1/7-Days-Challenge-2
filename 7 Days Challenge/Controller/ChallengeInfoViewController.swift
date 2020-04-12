@@ -19,8 +19,9 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     @IBOutlet weak var startChallengeBtn: UIButton!
     @IBOutlet weak var challengeScoreLbl: UILabel!
     
+    var videoFile = ""
     @IBAction func startVideo(_ sender: Any) {
-        if let path = Bundle.main.path(forResource: "IMG_0447", ofType: "MOV"){
+        if let path = Bundle.main.path(forResource: videoFile, ofType: "MOV"){
             let video = AVPlayer(url: URL(fileURLWithPath: path))
             let videoPlayer = AVPlayerViewController()
             videoPlayer.player = video

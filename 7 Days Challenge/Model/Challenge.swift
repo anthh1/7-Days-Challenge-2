@@ -13,9 +13,7 @@ struct Challenge {
     var challengeName: String
     var challengeDay: Int
     var challengeScore: Int
-    var challengeMinReps: Int
-    var challengeObjects: String
     var challengeDesc: String
-    var challengeDate: String
     var challengeImage: String
+    var challengeVideo: String
 }

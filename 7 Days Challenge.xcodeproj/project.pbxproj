@@ -31,6 +31,11 @@
 		D72DF0012439FADE00ECA0DB /* ChallengeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */; };
 		D73C5F25244302DD000C591F /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73C5F24244302DD000C591F /* Achievement.swift */; };
 		D73C5F29244306A1000C591F /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73C5F28244306A1000C591F /* AchievementCollectionViewCell.swift */; };
+		D73C5F332443830F000C591F /* chandstand.MOV in Resources */ = {isa = PBXBuildFile; fileRef = D73C5F2E2443830E000C591F /* chandstand.MOV */; };
+		D73C5F342443830F000C591F /* cbenchdip.MOV in Resources */ = {isa = PBXBuildFile; fileRef = D73C5F2F2443830E000C591F /* cbenchdip.MOV */; };
+		D73C5F352443830F000C591F /* csteps180.MOV in Resources */ = {isa = PBXBuildFile; fileRef = D73C5F302443830E000C591F /* csteps180.MOV */; };
+		D73C5F362443830F000C591F /* cbenchdipp.MOV in Resources */ = {isa = PBXBuildFile; fileRef = D73C5F312443830F000C591F /* cbenchdipp.MOV */; };
+		D73C5F372443830F000C591F /* cwalkupstairs.MOV in Resources */ = {isa = PBXBuildFile; fileRef = D73C5F322443830F000C591F /* cwalkupstairs.MOV */; };
 		D7C7A887243D7EA700E154FD /* ChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7A886243D7EA700E154FD /* ChallengeTableViewCell.swift */; };
 		D7C7A8BF243DDB8000E154FD /* 7DaysChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7C7A8BD243DDB8000E154FD /* 7DaysChallenge.xcdatamodeld */; };
 		EB802424F9C89C415EA801EB /* Pods_7_Days_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86065F57921B3B8133640674 /* Pods_7_Days_Challenge.framework */; };
@@ -66,6 +71,11 @@
 		D72DF0002439FADE00ECA0DB /* ChallengeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeInfoViewController.swift; sourceTree = "<group>"; };
 		D73C5F24244302DD000C591F /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		D73C5F28244306A1000C591F /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
+		D73C5F2E2443830E000C591F /* chandstand.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = chandstand.MOV; sourceTree = "<group>"; };
+		D73C5F2F2443830E000C591F /* cbenchdip.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = cbenchdip.MOV; sourceTree = "<group>"; };
+		D73C5F302443830E000C591F /* csteps180.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = csteps180.MOV; sourceTree = "<group>"; };
+		D73C5F312443830F000C591F /* cbenchdipp.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = cbenchdipp.MOV; sourceTree = "<group>"; };
+		D73C5F322443830F000C591F /* cwalkupstairs.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = cwalkupstairs.MOV; sourceTree = "<group>"; };
 		D7C7A886243D7EA700E154FD /* ChallengeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeTableViewCell.swift; sourceTree = "<group>"; };
 		D7C7A8BE243DDB8000E154FD /* 7DaysChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 7DaysChallenge.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +123,11 @@
 		92AAE96224388B7C00EC0611 /* 7 Days Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				D73C5F2F2443830E000C591F /* cbenchdip.MOV */,
+				D73C5F312443830F000C591F /* cbenchdipp.MOV */,
+				D73C5F2E2443830E000C591F /* chandstand.MOV */,
+				D73C5F302443830E000C591F /* csteps180.MOV */,
+				D73C5F322443830F000C591F /* cwalkupstairs.MOV */,
 				D7172365243F12C600BEDCE0 /* IMG_0447.MOV */,
 				D7C7A8BC243DD65100E154FD /* LottieAnimation */,
 				D7C7A8B9243DD61E00E154FD /* Model */,
@@ -257,6 +272,11 @@
 				B7ACABA0243D7D820094ECB1 /* reward.json in Resources */,
 				92704E3D243EBFB20005AA0A /* Slide.xib in Resources */,
 				B7DE53E8244376C300483194 /* well-done.json in Resources */,
+				D73C5F332443830F000C591F /* chandstand.MOV in Resources */,
+				D73C5F342443830F000C591F /* cbenchdip.MOV in Resources */,
+				D73C5F352443830F000C591F /* csteps180.MOV in Resources */,
+				D73C5F362443830F000C591F /* cbenchdipp.MOV in Resources */,
+				D73C5F372443830F000C591F /* cwalkupstairs.MOV in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,7 +491,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 94AQ28YXX2;
+				DEVELOPMENT_TEAM = JY65WKMSCH;
 				INFOPLIST_FILE = "7 Days Challenge/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -493,7 +513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 94AQ28YXX2;
+				DEVELOPMENT_TEAM = JY65WKMSCH;
 				INFOPLIST_FILE = "7 Days Challenge/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
