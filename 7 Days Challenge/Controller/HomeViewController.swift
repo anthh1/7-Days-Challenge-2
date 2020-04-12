@@ -87,11 +87,6 @@ class HomeViewController: UITableViewController {
             
         }else if (indexPath.section == 1){
             let challenge = challenges[indexPath.row]
-    
-            cell.challengeNameLbl.text = challenge.challengeName
-            cell.challengeScoreLbl.text = "\(challenge.challengeScore) pts"
-            cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
-            
             cell.challengeNameLbl.text = challenge.challengeName
             cell.challengeScoreLbl.text = "\(challenge.challengeScore) pts"
             cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
