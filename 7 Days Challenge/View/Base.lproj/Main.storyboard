@@ -74,13 +74,6 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5y-7c-ni8">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sj8-bf-YEE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="414" id="gZr-if-Xnw"/>
-                                                        <constraint firstAttribute="height" constant="178" id="rmv-Fp-2xJ"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5J-WR-96M">
                                                     <rect key="frame" x="20" y="13" width="104" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -89,7 +82,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Push-Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqe-H3-2Af">
-                                                    <rect key="frame" x="20" y="31" width="149" height="30"/>
+                                                    <rect key="frame" x="20" y="31" width="256" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -104,12 +97,6 @@
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.1058823529" green="0.01176470588" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="sj8-bf-YEE" secondAttribute="bottom" id="73g-ZM-Y7u"/>
-                                                <constraint firstItem="sj8-bf-YEE" firstAttribute="leading" secondItem="K5y-7c-ni8" secondAttribute="leading" id="oPT-6S-JWT"/>
-                                                <constraint firstAttribute="trailing" secondItem="sj8-bf-YEE" secondAttribute="trailing" id="s6K-FG-ugt"/>
-                                                <constraint firstItem="sj8-bf-YEE" firstAttribute="top" secondItem="K5y-7c-ni8" secondAttribute="top" id="x4d-dr-AGr"/>
-                                            </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
@@ -124,7 +111,6 @@
                                     <outlet property="challengeDayLbl" destination="H5J-WR-96M" id="kOE-tR-wme"/>
                                     <outlet property="challengeNameLbl" destination="gqe-H3-2Af" id="h34-9d-Nko"/>
                                     <outlet property="challengeScoreLbl" destination="d1R-mG-tJ3" id="r39-Bd-pqQ"/>
-                                    <outlet property="imageChallenge" destination="sj8-bf-YEE" id="ibL-RQ-b2f"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

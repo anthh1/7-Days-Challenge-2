@@ -10,7 +10,6 @@ import UIKit
 
 class ChallengeTableViewCell: UITableViewCell {
 
-    @IBOutlet var imageChallenge: UIImageView!
     @IBOutlet weak var challengeDayLbl: UILabel!
     @IBOutlet weak var challengeNameLbl: UILabel!
     @IBOutlet weak var challengeScoreLbl: UILabel!
@@ -19,7 +18,7 @@ class ChallengeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        challengeNameLbl.numberOfLines = 2
+        challengeNameLbl.numberOfLines = 0
         bgTable.layer.cornerRadius = 30
 
 
