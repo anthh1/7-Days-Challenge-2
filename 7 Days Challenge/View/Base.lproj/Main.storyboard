@@ -381,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FUC-VJ-Wh0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828" y="1737"/>
+            <point key="canvasLocation" x="1828" y="1693"/>
         </scene>
         <!--Day 1-->
         <scene sceneID="bpa-0W-jpD">
@@ -496,7 +496,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="R3H-yy-ams"/>
+        <segue reference="OPC-ow-miQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
