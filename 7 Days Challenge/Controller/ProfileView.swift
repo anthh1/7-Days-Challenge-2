@@ -12,12 +12,24 @@ class ProfileView: UIViewController {
 
     @IBOutlet var imageProfile: UIImageView!
     @IBOutlet var labelScore: UILabel!
+    @IBOutlet var lottieView: UIView!
     
+     let animationView = AnimationView()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-    }
+                setupAnimation()
+           }
+
+           private func setupAnimation(){
+                animationView.animation = Animation.named("reward")
+                animationView.frame = lottieView.frame
+                animationView.backgroundColor = .white
+                animationView.contentMode = .scaleAspectFit
+                animationView.loopMode = .loop
+                animationView.play()
+                view.addSubview(animationView)
+           }
     
 
     /*
