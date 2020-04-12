@@ -21,8 +21,9 @@ class HomeViewController: UITableViewController {
         Challenge(challengeID: 7, challengeName: "Wall Handstand", challengeDay: 7, challengeScore: 700, challengeMinReps: 10, challengeObjects: "Kursi", challengeDesc: "",challengeDate: "")
     ]
     
-    var dayCount = 0
+    var dayCount = UserDefaults.standard.integer(forKey: "dayCount")
     var challengeDates = [String]()
+    var challengeDay = UserDefaults.standard.integer(forKey: "firstDay")
     
     var cellSpacingHeight: CGFloat = 50
     var selectedIndex = Int()
@@ -34,134 +35,32 @@ class HomeViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.navigationItem.setHidesBackButton(true, animated: true);
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
-        let today: String
-        
-        startChallenges()
-        compareChallenges()
-
+        let today: Int
         let dateFormatter = DateFormatter()
         dateFormatter.setLocalizedDateFormatFromTemplate("dd")
-        today = dateFormatter.string(from: Date())
+        today = Int(dateFormatter.string(from: Date()))!
         
-        print(today)
-        
-        let searchValue = today
-        var currentIndex = 0
-
-        for challengeDate in challengeDates
-        {
-            if challengeDate != searchValue {
-                fetchChallenge()
-                break
-            }
-            currentIndex += 1
-        }
-        
-//        deleteAllData("StartChallenge")
-//        startChallenges()
-    }
-    
-    func startChallenges() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "StartChallenge", in: context)
-        let startChallenge = NSManagedObject(entity: entity!, insertInto: context)
-        
-        let currentDate: String
-
-        let dateFormatter = DateFormatter()
-        dateFormatter.setLocalizedDateFormatFromTemplate("dd")
-        currentDate = dateFormatter.string(from: Date())
-        
-        startChallenge.setValue(currentDate, forKey: "challengeDate")
-        print("saved")
-        
-        do {
-           try context.save()
-          } catch {
-           print("Failed saving")
+        if challengeDay == 0 {
+            dayCount+=1
+            UserDefaults.standard.set(today, forKey: "firstDay")
+            UserDefaults.standard.set(dayCount, forKey: "dayCount")
+            print(UserDefaults.standard.integer(forKey: "firstDay"))
+            print(UserDefaults.standard.integer(forKey: "dayCount"))
+        } else if challengeDay != today {
+            dayCount+=1
+            UserDefaults.standard.set(today, forKey: "firstDay")
+            UserDefaults.standard.set(dayCount, forKey: "dayCount")
+            print(UserDefaults.standard.integer(forKey: "firstDay"))
+            print(UserDefaults.standard.integer(forKey: "dayCount"))
+        } else if dayCount == 7{
+            UserDefaults.standard.set(0, forKey: "firstDay")
+            UserDefaults.standard.set(0, forKey: "dayCount")
         }
     }
-    
-    func compareChallenges() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "StartChallenge", in: context)
-        let compareChallenge = NSManagedObject(entity: entity!, insertInto: context)
-        
-        let currentDate: String
-
-        let dateFormatter = DateFormatter()
-        dateFormatter.setLocalizedDateFormatFromTemplate("dd")
-        currentDate = dateFormatter.string(from: Date())
-        
-        compareChallenge.setValue(currentDate, forKey: "compareDate")
-        
-        print("compare")
-
-        do {
-           try context.save()
-          } catch {
-           print("Failed saving")
-        }
-    }
-        
-    func deleteAllData(_ entity:String) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
-        fetchRequest.returnsObjectsAsFaults = false
-        
-        do {
-            let results = try context.fetch(fetchRequest)
-            for object in results {
-                guard let objectData = object as? NSManagedObject else {continue}
-                context.delete(objectData)
-            }
-        } catch let error {
-            print("Detele all data in \(entity) error :", error)
-        }
-    }
-    
-    func fetchChallenge() {
-    
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "StartChallenge")
-        request.returnsObjectsAsFaults = false
-
-        do {
-            let result = try context.fetch(request)
-            
-           for data in result as! [NSManagedObject] {
-                challengeDates.append("\(data.value(forKey: "challengeDate"))")
-                print(challengeDates.count)
-                print(challengeDates)
-            }
-        } catch {
-            print("Failed")
-        }
-    }
-    
-    
-    func convertToJSONArray(moArray: [NSManagedObject]) -> Any {
-        var jsonArray: [[String: Any]] = []
-        for item in moArray {
-            var dict: [String: Any] = [:]
-            for attribute in item.entity.attributesByName {
-                //check if value is present, then add key to dictionary so as to avoid the nil value crash
-                if let value = item.value(forKey: attribute.key) {
-                    dict[attribute.key] = value
-                }
-            }
-            jsonArray.append(dict)
-        }
-        return jsonArray
-    }
-    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -169,7 +68,7 @@ class HomeViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (section == 0) {
-            return 1
+            return challenges.count
         }
         else{
             return challenges.count
@@ -187,25 +86,27 @@ class HomeViewController: UITableViewController {
             
         }else if (indexPath.section == 1){
             let challenge = challenges[indexPath.row]
-            if(challenge.challengeID == 1){
-
-            } else {
-                cell.challengeNameLbl.text = challenge.challengeName
-                cell.challengeScoreLbl.text = "\(challenge.challengeScore) pts"
-                cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
-            }
+    
+            cell.challengeNameLbl.text = challenge.challengeName
+            cell.challengeScoreLbl.text = "\(challenge.challengeScore) pts"
+            cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
         }
         return cell
     }
     
     override func tableView(_ tableView: UITableView,
                             heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if (indexPath.section == 1) {
+    
+        if (indexPath.section == 0){
             let challenge = challenges[indexPath.row]
-            if(challenge.challengeID == 1){
+            if(challenge.challengeID != dayCount){
                 return 0
-            } else {
-              
+            }
+            
+        }else if (indexPath.section == 1) {
+            let challenge = challenges[indexPath.row]
+            if(challenge.challengeID <= dayCount){
+                return 0
             }
         }
         return tableView.rowHeight
@@ -250,7 +151,6 @@ class HomeViewController: UITableViewController {
         }
     }
     
-    
 //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //
 //    }
@@ -270,9 +170,6 @@ class HomeViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    
-    
 
 }
 
