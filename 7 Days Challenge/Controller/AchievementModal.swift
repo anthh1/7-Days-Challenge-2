@@ -13,6 +13,9 @@ class AchievementModal: UIViewController {
 
     @IBOutlet var lottieView: UIView!
     
+    var animationName = ""
+    
+    
      let animationView = AnimationView()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +26,7 @@ class AchievementModal: UIViewController {
            }
 
            private func setupAnimation(){
-                animationView.animation = Animation.named("reward")
+                animationView.animation = Animation.named(animationName)
                 animationView.frame = lottieView.frame
                 animationView.backgroundColor = .white
                 animationView.contentMode = .scaleAspectFit

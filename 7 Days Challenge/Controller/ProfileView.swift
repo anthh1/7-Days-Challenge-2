@@ -36,7 +36,32 @@ class ProfileView: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+        func startSegue(startCode: Int) {
+            print(startCode)
+            
+            switch startCode {
+            case 1:
+                print("")
+            case 2:
+                print("")
+            case 3:
+                print("")
+            case 4:
+                print("")
+            default:
+                print("")
+            }
+            performSegue(withIdentifier: "achievementSegue", sender: self)
 
+        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? AchievementModal {
+           
+            
+        }
+    }
 }
 
 extension ProfileView: UICollectionViewDataSource, UICollectionViewDelegate{
@@ -66,6 +91,18 @@ extension ProfileView: UICollectionViewDataSource, UICollectionViewDelegate{
        if let tempIndex = indexPath {
           print("Got clicked on index: \(tempIndex)!")
         
+            if tempIndex == [0, 0] {
+                startSegue(startCode: 1)
+            }
+            else if tempIndex == [0, 1]{
+                startSegue(startCode: 2)
+            }
+            else if tempIndex == [0, 2]{
+                startSegue(startCode: 3)
+            }
+            else if tempIndex == [0, 3]{
+                startSegue(startCode: 4)
+            }
        }
 
         
