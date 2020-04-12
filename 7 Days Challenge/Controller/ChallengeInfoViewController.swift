@@ -43,6 +43,7 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
+        self.title = "Day \(challengeDay)"
 
         setLabel()
     }
@@ -50,7 +51,7 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     func setLabel() {
         challengeNameLbl.text = challengeName
         descriptionLbl.text = challengeDesc
-        challengeScoreLbl.text = "Day \(challengeScore)"
+        challengeScoreLbl.text = "\(challengeScore) pts"
         
     }
     
