@@ -12,12 +12,11 @@ import AVKit
 
 class ChallengeInfoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
-    @IBOutlet weak var videoView: VideoView!
+    @IBOutlet weak var videoInfoThumbnail: UIButton!
     @IBOutlet weak var challengeNameLbl: UILabel!
-    @IBOutlet weak var minRepsLbl: UILabel!
-    @IBOutlet weak var objectLbl: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var startBtn: UIButton!
+    @IBOutlet weak var challengeScoreLbl: UILabel!
     
     @IBAction func startVideo(_ sender: Any) {
         if let path = Bundle.main.path(forResource: "IMG_0447", ofType: "MOV"){
@@ -31,14 +30,13 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
         }
     }
     
+    var challengeDay = 0
     var challengeName = ""
     var challengeDesc = ""
     var challengeScore = 100
     var newScore = 0
     var currentScore = 0
     
-    
-
     var controller = UIImagePickerController()
     let videoFileName = "/video.mp4"
     
@@ -51,6 +49,9 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     
     func setLabel() {
         challengeNameLbl.text = challengeName
+        descriptionLbl.text = challengeDesc
+        challengeScoreLbl.text = "Day \(challengeScore)"
+        
     }
     
     @IBAction func btnDoChallenge(_ sender: Any) {

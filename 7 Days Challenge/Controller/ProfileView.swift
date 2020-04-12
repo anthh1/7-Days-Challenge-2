@@ -23,7 +23,7 @@ class ProfileView: UIViewController {
 
         achievementCollectionView.dataSource = self
 
-               
+        labelScore.text = "Score: \(UserDefaults.standard.integer(forKey: "Score"))"
         // Do any additional setup after loading the view.
     }
 
