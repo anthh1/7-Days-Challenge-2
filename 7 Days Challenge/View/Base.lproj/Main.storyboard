@@ -78,22 +78,22 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5J-WR-96M">
-                                                    <rect key="frame" x="20" y="13" width="104" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5J-WR-96M">
+                                                    <rect key="frame" x="20" y="17" width="104" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Push-Up" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqe-H3-2Af">
-                                                    <rect key="frame" x="20" y="31" width="374" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Push-Up" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqe-H3-2Af">
+                                                    <rect key="frame" x="20" y="34" width="191" height="98"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1R-mG-tJ3">
-                                                    <rect key="frame" x="23" y="140" width="101" height="22"/>
+                                                    <rect key="frame" x="23" y="144" width="101" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="101" id="Mtl-76-PGy"/>
                                                         <constraint firstAttribute="height" constant="22" id="zLZ-Tv-zPd"/>
@@ -109,7 +109,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="NDI-iJ-E7z" secondAttribute="bottom" id="bgu-48-zfD"/>
                                                 <constraint firstAttribute="trailing" secondItem="NDI-iJ-E7z" secondAttribute="trailing" id="lsO-Zu-AYx"/>
                                                 <constraint firstItem="d1R-mG-tJ3" firstAttribute="leading" secondItem="K5y-7c-ni8" secondAttribute="leading" constant="23" id="n2W-HF-dna"/>
-                                                <constraint firstAttribute="bottom" secondItem="d1R-mG-tJ3" secondAttribute="bottom" constant="16" id="sh4-HS-K39"/>
+                                                <constraint firstAttribute="bottom" secondItem="d1R-mG-tJ3" secondAttribute="bottom" constant="12" id="sh4-HS-K39"/>
                                                 <constraint firstItem="NDI-iJ-E7z" firstAttribute="top" secondItem="K5y-7c-ni8" secondAttribute="top" id="twZ-T8-0Ql"/>
                                             </constraints>
                                         </view>
@@ -524,7 +524,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="R3H-yy-ams"/>
+        <segue reference="OPC-ow-miQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Badge" width="269" height="269"/>
