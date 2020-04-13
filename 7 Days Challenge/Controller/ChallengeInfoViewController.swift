@@ -34,6 +34,7 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
         }
     }
     
+    var videoThumbnail = ""
     var challengeDay = 0
     var challengeName = ""
     var challengeDesc = ""
@@ -46,13 +47,14 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        videoInfoThumbnail.setImage(UIImage(named: videoThumbnail), for: UIControl.State.normal)
         
         UserDefaults.standard.set(false, forKey: "check")
         navigationItem.largeTitleDisplayMode = .never
         self.title = "Day \(challengeDay)"
         startChallengeBtn.layer.cornerRadius = 35
-        
-        
+                
         setLabel()
     }
     

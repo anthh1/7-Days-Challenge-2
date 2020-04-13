@@ -13,7 +13,7 @@ class HomeViewController: UITableViewController {
 
     var challenges = [
         Challenge(challengeID: 1,challengeName: "Bench Push Up", challengeDay: 1, challengeScore: 100, challengeDesc: "this push up will be easier than floor push up because it is an inclined angle, therefore it will not be your full body weight, do this for 15 repetitions or as desired. ", challengeImage: "pushup", challengeVideo: "cpushup", videoThumbnail: ""),
-        Challenge(challengeID: 2, challengeName: "Burpees", challengeDay: 2, challengeScore: 200, challengeDesc: "Get into push up position, stand up and jump up! When you land, go back into push up position and do one push up, repeat. Do this for 10 times!", challengeImage: "burpees", challengeVideo: "cburpees", videoThumbnail: ""),
+        Challenge(challengeID: 2, challengeName: "Burpees", challengeDay: 2, challengeScore: 200, challengeDesc: "Get into push up position, stand up and jump up! When you land, go back into push up position and do one push up, repeat. Do this for 10 times!", challengeImage: "burpees", challengeVideo: "cburpees", videoThumbnail: "thumb"),
         Challenge(challengeID: 3, challengeName: "3 Steps 180", challengeDay: 3, challengeScore: 300, challengeDesc: "Start with your left leg take one step forward, then with your right foot, land 90 degrees to the direction you are facing and finally land on your left leg with your right leg hanging, this is for practicing your balance.  go back the other way, repeat for 10 times.", challengeImage: "steps180", challengeVideo: "csteps180", videoThumbnail: ""),
         Challenge(challengeID: 4, challengeName: "Reverse Plank", challengeDay: 4, challengeScore: 400, challengeDesc: "do the reverse plank from a sitting position with both legs outstretched in front, put your palms behind your butt and lift up your hip until you form a nice right angled triangle. and hold for 30 seconds or longer. ", challengeImage: "plank", challengeVideo: "cplank", videoThumbnail: ""),
         Challenge(challengeID: 5, challengeName: "Bench Dip", challengeDay: 5, challengeScore: 500, challengeDesc: "Step up with one leg and carry your whole body up, then lift the other leg’s knee to chest high or at least waist high. and repeat this for the other leg as well, go for 10 repetitions .", challengeImage: "benchDip", challengeVideo: "cbenchdipp", videoThumbnail: ""),
@@ -83,8 +83,6 @@ class HomeViewController: UITableViewController {
             cell.challengeScoreLbl.text = "\(challenge.challengeScore) pts"
             cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
             cell.challengeImageBg.image = UIImage(named: "\(challenge.challengeImage)")
-            
-            
         }else if (indexPath.section == 1){
             let challenge = challenges[indexPath.row]
             cell.challengeNameLbl.text = challenge.challengeName
@@ -156,7 +154,7 @@ class HomeViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "challengeInfoVC" {
-            let vc : ChallengeInfoViewController = segue.destination as! ChallengeInfoViewController
+            let vc: ChallengeInfoViewController = segue.destination as! ChallengeInfoViewController
             let challenge = challenges[selectedIndex]
             
             vc.videoFile = challenge.challengeVideo
@@ -164,6 +162,8 @@ class HomeViewController: UITableViewController {
             vc.challengeName = challenge.challengeName
             vc.challengeDesc = challenge.challengeDesc
             vc.challengeScore = challenge.challengeScore
+            vc.videoThumbnail = challenge.videoThumbnail
+
             print(selectedIndex)
         }
         
