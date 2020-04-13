@@ -19,6 +19,8 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     @IBOutlet weak var startChallengeBtn: UIButton!
     @IBOutlet weak var challengeScoreLbl: UILabel!
     
+    var dayStreak = 0
+    
     var videoFile = ""
     @IBAction func startVideo(_ sender: Any) {
         if let path = Bundle.main.path(forResource: videoFile, ofType: "MOV"){
@@ -101,6 +103,31 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
             if UserDefaults.standard.integer(forKey: "Unlock") == 0 {
                 UserDefaults.standard.set(1, forKey: "Unlock")
             }
+            
+            if UserDefaults.standard.integer(forKey: "dayCount") == 1{
+                dayStreak =  UserDefaults.standard.integer(forKey: "DayStreak") + 1
+                UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
+            } else if UserDefaults.standard.integer(forKey: "dayCount") == 2{
+                dayStreak =  UserDefaults.standard.integer(forKey: "DayStreak") + 1
+                UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
+            } else if UserDefaults.standard.integer(forKey: "dayCount") == 3{
+                dayStreak =  UserDefaults.standard.integer(forKey: "DayStreak") + 1
+                UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
+            } else if UserDefaults.standard.integer(forKey: "dayCount") == 4{
+                dayStreak =  UserDefaults.standard.integer(forKey: "DayStreak") + 1
+                UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
+            } else if UserDefaults.standard.integer(forKey: "dayCount") == 5{
+                dayStreak =  UserDefaults.standard.integer(forKey: "DayStreak") + 1
+                UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
+            } else if UserDefaults.standard.integer(forKey: "dayCount") == 6{
+                dayStreak =  UserDefaults.standard.integer(forKey: "DayStreak") + 1
+                UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
+            } else if UserDefaults.standard.integer(forKey: "dayCount") == 7{
+                dayStreak =  UserDefaults.standard.integer(forKey: "DayStreak") + 1
+                UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
+            }
+        
+            
             performSegue(withIdentifier: "challengeDone", sender: self)
         }
     }

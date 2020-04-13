@@ -19,18 +19,24 @@ class ProfileView: UIViewController {
     var animationJSON = ""
     var animationName = ""
     var achievementUnlock = UserDefaults.standard.integer(forKey: "Unlock")
-                  
+    var dayStreak = UserDefaults.standard.integer(forKey: "DayStreak")
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         achievementCollectionView.dataSource = self
-        
-        if UserDefaults.standard.integer(forKey: "Score") == 300{
+                
+        if UserDefaults.standard.integer(forKey: "Score") == 200{
             UserDefaults.standard.set(2, forKey: "Unlock")
         }
         
-        if UserDefaults.standard.integer(forKey: "Score") == 1000{
+        if UserDefaults.standard.integer(forKey: "Score") == 900{
             UserDefaults.standard.set(3, forKey: "Unlock")
+        }
+        
+        if UserDefaults.standard.integer(forKey: "DayStreak") == 7{
+            UserDefaults.standard.set(4, forKey: "Unlock")
         }
         
         if achievementUnlock >= 1 {

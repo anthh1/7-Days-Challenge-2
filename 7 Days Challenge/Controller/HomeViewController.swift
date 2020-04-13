@@ -35,7 +35,6 @@ class HomeViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         self.navigationItem.setHidesBackButton(true, animated: true);
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
@@ -125,7 +124,11 @@ class HomeViewController: UITableViewController {
             self.selectedIndex = indexPath.row
             let challenge = challenges[indexPath.row]
             performSegue(withIdentifier: "challengeInfoVC", sender: challenge)
+        }else if (indexPath.section == 1){
+            showAlert()
         }
+        
+        
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -155,6 +158,16 @@ class HomeViewController: UITableViewController {
             vc.challengeScore = challenge.challengeScore
             print(selectedIndex)
         }
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Challenge Locked", message: "You can't access this challenge yet", preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.cancel, handler: { _ in
+            //Cancel Action
+        }))
+       
+        self.present(alert, animated: true, completion: nil)
     }
     
 //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
