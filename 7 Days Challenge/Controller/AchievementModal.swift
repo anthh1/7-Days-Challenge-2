@@ -19,8 +19,7 @@ class AchievementModal: UIViewController {
     
     
     var animationName = ""
-    
-    
+ 
      let animationView = AnimationView()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +38,7 @@ class AchievementModal: UIViewController {
                 animationView.loopMode = .loop
                 animationView.play()
                 view.addSubview(animationView)
+            
            }
         // Do any additional setup after loading the view.
     }
