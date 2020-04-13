@@ -23,7 +23,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        goButton.layer.cornerRadius = 35
+        goButton.layer.cornerRadius = 20
         
         scrollView.delegate = self
         
