@@ -48,6 +48,7 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
         self.title = "Day \(challengeDay)"
         startChallengeBtn.layer.cornerRadius = 35
         
+        
         setLabel()
     }
     
@@ -57,6 +58,7 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
         challengeScoreLbl.text = "\(challengeScore) pts"
         
     }
+    
     
     @IBAction func btnDoChallenge(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
