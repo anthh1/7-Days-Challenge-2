@@ -29,6 +29,10 @@ class ProfileView: UIViewController {
             UserDefaults.standard.set(2, forKey: "Unlock")
         }
         
+        ifUserDefaults.standard.integer(forKey: "Score") == 1000{
+            UserDefaults.standard.set(3, forKey: "Unlock")
+        }
+        
         if achievementUnlock >= 1 {
             for n in 0...achievementUnlock-1 {
                 achievements[n].enable = true
