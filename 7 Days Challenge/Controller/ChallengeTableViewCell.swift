@@ -22,7 +22,7 @@ class ChallengeTableViewCell: UITableViewCell {
         super.awakeFromNib()
 
         challengeNameLbl.numberOfLines = 2
-        bgTable.layer.cornerRadius = 20
+        bgTable.layer.cornerRadius = 30
         self.selectedBackgroundView = UIView()
 //      self.selectionStyle = .none
     }
@@ -40,6 +40,7 @@ class ChallengeTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 7, left: 20, bottom: 7, right: 20))
+        contentView.layer.cornerRadius = 30
     }
     
     func animate() {
