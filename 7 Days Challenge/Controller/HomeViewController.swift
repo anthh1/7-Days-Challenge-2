@@ -125,7 +125,11 @@ class HomeViewController: UITableViewController {
             let challenge = challenges[indexPath.row]
             performSegue(withIdentifier: "challengeInfoVC", sender: challenge)
         }else if (indexPath.section == 1){
-            showAlert()
+            self.selectedIndex = indexPath.row
+            let challenge = challenges[indexPath.row]
+            performSegue(withIdentifier: "challengeInfoVC", sender: challenge)
+            
+//            showAlert()
         }
         
         
