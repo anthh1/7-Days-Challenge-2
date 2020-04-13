@@ -15,7 +15,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var goButton: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
-  
+        self.navigationController?.isNavigationBarHidden = true
+
     }
     
     var slides:[Slide] = [];
@@ -32,6 +33,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
        pageControl.numberOfPages = slides.count
        pageControl.currentPage = 0
         view.bringSubviewToFront(pageControl)
+        
+        self.navigationController?.isNavigationBarHidden = true
+
     }
     func createSlides() -> [Slide] {
 

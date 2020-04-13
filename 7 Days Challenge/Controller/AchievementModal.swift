@@ -21,6 +21,11 @@ class AchievementModal: UIViewController {
     var animationName = ""
  
      let animationView = AnimationView()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never

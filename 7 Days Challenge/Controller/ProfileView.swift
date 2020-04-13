@@ -34,10 +34,15 @@ class ProfileView: UIViewController, UIImagePickerControllerDelegate & UINavigat
         present(controller, animated: true, completion: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         achievementCollectionView.dataSource = self
-                
+        
         if UserDefaults.standard.integer(forKey: "Score") == 200{
             UserDefaults.standard.set(2, forKey: "Unlock")
         }
