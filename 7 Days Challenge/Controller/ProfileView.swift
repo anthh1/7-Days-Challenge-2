@@ -24,11 +24,15 @@ class ProfileView: UIViewController {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         achievementCollectionView.dataSource = self
+        
+        
 
         if achievementUnlock >= 1 {
             for n in 0...achievementUnlock-1 {
                 achievements[n].enable = true
             }
+        } else if UserDefaults.standard.integer(forKey: "Score") == 300{
+            UserDefaults.standard.set(2, forKey: "Unlock")
         }
        
         labelScore.text = "Score: \(UserDefaults.standard.integer(forKey: "Score"))"
