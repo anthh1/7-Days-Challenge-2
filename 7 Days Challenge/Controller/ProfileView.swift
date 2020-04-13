@@ -25,10 +25,11 @@ class ProfileView: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
         achievementCollectionView.dataSource = self
         
-        
         if UserDefaults.standard.integer(forKey: "Score") == 300{
             UserDefaults.standard.set(2, forKey: "Unlock")
-        } else if achievementUnlock >= 1 {
+        }
+        
+        if achievementUnlock >= 1 {
             for n in 0...achievementUnlock-1 {
                 achievements[n].enable = true
             }
@@ -88,6 +89,9 @@ extension ProfileView: UICollectionViewDataSource, UICollectionViewDelegate{
         animationJSON = achievement.achievementJSON
         animationName = achievement.achievementName
 
+        
+        switch achievementUnlock {
+        case 1:
             if tempIndex == [0, 0] {
                 startSegue(startCode: 1)
             }
@@ -100,6 +104,41 @@ extension ProfileView: UICollectionViewDataSource, UICollectionViewDelegate{
             else if tempIndex == [0, 3]{
                 startSegue(startCode: 4)
             }
+        case 2:
+            if tempIndex == [0, 0] {
+                startSegue(startCode: 1)
+            }
+            else if tempIndex == [0, 1]{
+                startSegue(startCode: 2)
+            }
+        case 3:
+            if tempIndex == [0, 0] {
+                startSegue(startCode: 1)
+            }
+            else if tempIndex == [0, 1]{
+                startSegue(startCode: 2)
+            }
+            else if tempIndex == [0, 2]{
+                startSegue(startCode: 3)
+            }
+        case 4:
+            if tempIndex == [0, 0] {
+                startSegue(startCode: 1)
+            }
+            else if tempIndex == [0, 1]{
+                startSegue(startCode: 2)
+            }
+            else if tempIndex == [0, 2]{
+                startSegue(startCode: 3)
+            }
+            else if tempIndex == [0, 3]{
+                startSegue(startCode: 4)
+            }
+        default:
+            print("")
+        }
+            
+            
        }
 
         
