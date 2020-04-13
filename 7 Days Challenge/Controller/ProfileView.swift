@@ -29,7 +29,7 @@ class ProfileView: UIViewController {
             UserDefaults.standard.set(2, forKey: "Unlock")
         }
         
-        ifUserDefaults.standard.integer(forKey: "Score") == 1000{
+        if UserDefaults.standard.integer(forKey: "Score") == 1000{
             UserDefaults.standard.set(3, forKey: "Unlock")
         }
         
