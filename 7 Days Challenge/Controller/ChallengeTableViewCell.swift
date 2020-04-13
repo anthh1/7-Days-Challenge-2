@@ -16,18 +16,39 @@ class ChallengeTableViewCell: UITableViewCell {
     @IBOutlet weak var challengeScoreLbl: UILabel!
     @IBOutlet weak var bgTable: UIView!
     
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
         challengeNameLbl.numberOfLines = 2
-        bgTable.layer.cornerRadius = 30
+        bgTable.layer.cornerRadius = 20
         self.selectedBackgroundView = UIView()
 //      self.selectionStyle = .none
     }
 
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        animate()
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 30, bottom: 10, right: 30))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20))
     }
+    
+    func animate() {
+          UIView.animate(withDuration: 0.1,
+        animations: {
+            self.bgTable.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        },
+            completion: { _ in
+        UIView.animate(withDuration: 0.1) {
+            self.bgTable.transform = CGAffineTransform.identity
+            }
+        })
+    }
+    
 }

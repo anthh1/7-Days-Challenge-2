@@ -71,13 +71,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NDI-iJ-E7z">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </imageView>
                                         <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5y-7c-ni8">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
                                             <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NDI-iJ-E7z">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5J-WR-96M">
                                                     <rect key="frame" x="20" y="13" width="104" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -105,20 +105,20 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstItem="NDI-iJ-E7z" firstAttribute="leading" secondItem="K5y-7c-ni8" secondAttribute="leading" id="EeV-Qw-W7u"/>
+                                                <constraint firstAttribute="bottom" secondItem="NDI-iJ-E7z" secondAttribute="bottom" id="bgu-48-zfD"/>
+                                                <constraint firstAttribute="trailing" secondItem="NDI-iJ-E7z" secondAttribute="trailing" id="lsO-Zu-AYx"/>
                                                 <constraint firstItem="d1R-mG-tJ3" firstAttribute="leading" secondItem="K5y-7c-ni8" secondAttribute="leading" constant="23" id="n2W-HF-dna"/>
                                                 <constraint firstAttribute="bottom" secondItem="d1R-mG-tJ3" secondAttribute="bottom" constant="16" id="sh4-HS-K39"/>
+                                                <constraint firstItem="NDI-iJ-E7z" firstAttribute="top" secondItem="K5y-7c-ni8" secondAttribute="top" id="twZ-T8-0Ql"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="NDI-iJ-E7z" secondAttribute="bottom" id="DuP-Hm-GWa"/>
                                         <constraint firstItem="K5y-7c-ni8" firstAttribute="leading" secondItem="v87-tM-bUa" secondAttribute="leading" id="Ibu-n9-SV4"/>
                                         <constraint firstItem="K5y-7c-ni8" firstAttribute="top" secondItem="v87-tM-bUa" secondAttribute="top" id="JMU-CK-sei"/>
                                         <constraint firstAttribute="bottom" secondItem="K5y-7c-ni8" secondAttribute="bottom" id="Sxx-tM-zT6"/>
                                         <constraint firstAttribute="trailing" secondItem="K5y-7c-ni8" secondAttribute="trailing" id="iN8-cq-0JE"/>
-                                        <constraint firstItem="NDI-iJ-E7z" firstAttribute="top" secondItem="v87-tM-bUa" secondAttribute="top" id="ltL-0H-Mlm"/>
-                                        <constraint firstAttribute="trailing" secondItem="NDI-iJ-E7z" secondAttribute="trailing" id="s6t-PR-gnY"/>
-                                        <constraint firstItem="NDI-iJ-E7z" firstAttribute="leading" secondItem="v87-tM-bUa" secondAttribute="leading" id="v3c-Wt-eXj"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -534,7 +534,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OPC-ow-miQ"/>
+        <segue reference="R3H-yy-ams"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>

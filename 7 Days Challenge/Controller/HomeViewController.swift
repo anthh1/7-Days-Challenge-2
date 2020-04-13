@@ -12,13 +12,13 @@ import CoreData
 class HomeViewController: UITableViewController {
 
     var challenges = [
-        Challenge(challengeID: 1,challengeName: "Bench Push Up", challengeDay: 1, challengeScore: 100, challengeDesc: "this push up will be easier than floor push up because it is an inclined angle, therefore it will not be your full body weight, do this for 15 repetitions or as desired. ", challengeImage: "pushup", challengeVideo: "cpushup"),
-        Challenge(challengeID: 2, challengeName: "Burpees", challengeDay: 2, challengeScore: 200, challengeDesc: "Get into push up position, stand up and jump up! When you land, go back into push up position and do one push up, repeat. Do this for 10 times!", challengeImage: "burpees", challengeVideo: "cburpees"),
-        Challenge(challengeID: 3, challengeName: "3 Steps 180", challengeDay: 3, challengeScore: 300, challengeDesc: "Start with your left leg take one step forward, then with your right foot, land 90 degrees to the direction you are facing and finally land on your left leg with your right leg hanging, this is for practicing your balance.  go back the other way, repeat for 10 times.", challengeImage: "steps180", challengeVideo: "csteps180"),
-        Challenge(challengeID: 4, challengeName: "Reverse Plank", challengeDay: 4, challengeScore: 400, challengeDesc: "do the reverse plank from a sitting position with both legs outstretched in front, put your palms behind your butt and lift up your hip until you form a nice right angled triangle. and hold for 30 seconds or longer. ", challengeImage: "plank", challengeVideo: "cplank"),
-        Challenge(challengeID: 5, challengeName: "Bench Dip", challengeDay: 5, challengeScore: 500, challengeDesc: "Step up with one leg and carry your whole body up, then lift the other leg’s knee to chest high or at least waist high. and repeat this for the other leg as well, go for 10 repetitions .", challengeImage: "benchDip", challengeVideo: "cbenchdipp"),
-        Challenge(challengeID: 6, challengeName: "Walk Up Stairs", challengeDay: 6, challengeScore: 600, challengeDesc: "Walk upstairs, by skipping one or two steps at a time depending on your abilities and repeat 5 times up and down.", challengeImage: "walkStairs", challengeVideo: "cwalkupstairs"),
-        Challenge(challengeID: 7, challengeName: "Wall Handstand", challengeDay: 7, challengeScore: 700, challengeDesc: "Use the wall anywhere to do a handstand, if you are able, maybe you can try hand stand push ups, if you want your walls to be as clean, make sure to clean your feet which might dirty the walls try to hold for 10 seconds.", challengeImage: "wallHandstand", challengeVideo: "chandstand")
+        Challenge(challengeID: 1,challengeName: "Bench Push Up", challengeDay: 1, challengeScore: 100, challengeDesc: "this push up will be easier than floor push up because it is an inclined angle, therefore it will not be your full body weight, do this for 15 repetitions or as desired. ", challengeImage: "pushup", challengeVideo: "cpushup", videoThumbnail: ""),
+        Challenge(challengeID: 2, challengeName: "Burpees", challengeDay: 2, challengeScore: 200, challengeDesc: "Get into push up position, stand up and jump up! When you land, go back into push up position and do one push up, repeat. Do this for 10 times!", challengeImage: "burpees", challengeVideo: "cburpees", videoThumbnail: ""),
+        Challenge(challengeID: 3, challengeName: "3 Steps 180", challengeDay: 3, challengeScore: 300, challengeDesc: "Start with your left leg take one step forward, then with your right foot, land 90 degrees to the direction you are facing and finally land on your left leg with your right leg hanging, this is for practicing your balance.  go back the other way, repeat for 10 times.", challengeImage: "steps180", challengeVideo: "csteps180", videoThumbnail: ""),
+        Challenge(challengeID: 4, challengeName: "Reverse Plank", challengeDay: 4, challengeScore: 400, challengeDesc: "do the reverse plank from a sitting position with both legs outstretched in front, put your palms behind your butt and lift up your hip until you form a nice right angled triangle. and hold for 30 seconds or longer. ", challengeImage: "plank", challengeVideo: "cplank", videoThumbnail: ""),
+        Challenge(challengeID: 5, challengeName: "Bench Dip", challengeDay: 5, challengeScore: 500, challengeDesc: "Step up with one leg and carry your whole body up, then lift the other leg’s knee to chest high or at least waist high. and repeat this for the other leg as well, go for 10 repetitions .", challengeImage: "benchDip", challengeVideo: "cbenchdipp", videoThumbnail: ""),
+        Challenge(challengeID: 6, challengeName: "Walk Up Stairs", challengeDay: 6, challengeScore: 600, challengeDesc: "Walk upstairs, by skipping one or two steps at a time depending on your abilities and repeat 5 times up and down.", challengeImage: "walkStairs", challengeVideo: "cwalkupstairs", videoThumbnail: ""),
+        Challenge(challengeID: 7, challengeName: "Wall Handstand", challengeDay: 7, challengeScore: 700, challengeDesc: "Use the wall anywhere to do a handstand, if you are able, maybe you can try hand stand push ups, if you want your walls to be as clean, make sure to clean your feet which might dirty the walls try to hold for 10 seconds.", challengeImage: "wallHandstand", challengeVideo: "chandstand", videoThumbnail: "")
     ]
     
     var dayCount = UserDefaults.standard.integer(forKey: "dayCount")
@@ -37,14 +37,7 @@ class HomeViewController: UITableViewController {
         
         self.navigationItem.setHidesBackButton(true, animated: true);
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        
-        self.tableView.backgroundView = {
-            var view = UIView(frame: CGRect.zero)
-            view.backgroundColor = .white
-            
-            return view
-        }()
-        
+                    
         let today: Int
         let dateFormatter = DateFormatter()
         dateFormatter.setLocalizedDateFormatFromTemplate("dd")
@@ -91,6 +84,7 @@ class HomeViewController: UITableViewController {
             cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
             cell.challengeImageBg.image = UIImage(named: "\(challenge.challengeImage)")
             
+            
         }else if (indexPath.section == 1){
             let challenge = challenges[indexPath.row]
             cell.challengeNameLbl.text = challenge.challengeName
@@ -130,27 +124,17 @@ class HomeViewController: UITableViewController {
         if (indexPath.section == 0){
             self.selectedIndex = indexPath.row
             let challenge = challenges[indexPath.row]
-            performSegue(withIdentifier: "challengeInfoVC", sender: challenge)
-        }else if (indexPath.section == 1){
-            self.selectedIndex = indexPath.row
-            let challenge = challenges[indexPath.row]
-            performSegue(withIdentifier: "challengeInfoVC", sender: challenge)
             
-//            showAlert()
+            Timer.scheduledTimer(withTimeInterval: 0.18, repeats: false) { (timer) in
+                self.performSegue(withIdentifier: "challengeInfoVC", sender: challenge)
+            }
+            
+        }else if (indexPath.section == 1){
+            showAlert()
         }
         
         
     }
-    
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//
-//        if section == 0 {
-//            return "Today's Challenge"
-//        } else {
-//            return "Next Challenges"
-//        }
-//
-//    }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 10, y: 20, width: tableView.bounds.size.width, height: 30))
@@ -169,10 +153,6 @@ class HomeViewController: UITableViewController {
         return headerView
     }
     
-//    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-//        tableView.tableHeaderView?.backgroundColor = UIColor.blue
-//    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "challengeInfoVC" {
@@ -186,6 +166,8 @@ class HomeViewController: UITableViewController {
             vc.challengeScore = challenge.challengeScore
             print(selectedIndex)
         }
+        
+        
     }
     
     func showAlert() {
@@ -197,26 +179,6 @@ class HomeViewController: UITableViewController {
        
         self.present(alert, animated: true, completion: nil)
     }
-    
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//    }
-    
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

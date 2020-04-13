@@ -19,7 +19,7 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     @IBOutlet weak var startChallengeBtn: UIButton!
     @IBOutlet weak var challengeScoreLbl: UILabel!
     
-    var dayStreak = 0
+    var dayStreak = UserDefaults.standard.integer(forKey: "DayStreak")
     
     var videoFile = ""
     @IBAction func startVideo(_ sender: Any) {
@@ -46,6 +46,8 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UserDefaults.standard.set(false, forKey: "check")
         navigationItem.largeTitleDisplayMode = .never
         self.title = "Day \(challengeDay)"
         startChallengeBtn.layer.cornerRadius = 35
@@ -79,6 +81,7 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
       
         if let selectedVideo:URL = (info[UIImagePickerController.InfoKey.mediaURL] as? URL) {
 //            let alert = UIAlertController(title: "Submit Video", message: "Are you sure you want to submit it to gallery?", preferredStyle: .alert)
+            
             let selectorToCall = #selector(videoSaved(_:didFinishSavingWithError:context:))
             UISaveVideoAtPathToSavedPhotosAlbum(selectedVideo.relativePath, self, selectorToCall, nil)
             let videoData = try? Data(contentsOf: selectedVideo)
@@ -89,6 +92,11 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
             try! videoData?.write(to: dataPath, options: [])
         }
         picker.dismiss(animated: true)
+    }
+    
+    func addDayStreak() {
+        dayStreak += 1
+        UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
     }
     
     @objc func videoSaved(_ video: String, didFinishSavingWithError error: NSError!, context: UnsafeMutableRawPointer){
@@ -104,32 +112,26 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
                 UserDefaults.standard.set(1, forKey: "Unlock")
             }
             
-            if UserDefaults.standard.integer(forKey: "dayCount") == 1{
-                dayStreak =  UserDefaults.standard.integer(forKey: "DayStreak") + 1
-                UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
-            } else if UserDefaults.standard.integer(forKey: "dayCount") == 2{
-                dayStreak =  UserDefaults.standard.integer(forKey: "DayStreak") + 1
-                UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
-            } else if UserDefaults.standard.integer(forKey: "dayCount") == 3{
-                dayStreak =  UserDefaults.standard.integer(forKey: "DayStreak") + 1
-                UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
-            } else if UserDefaults.standard.integer(forKey: "dayCount") == 4{
-                dayStreak =  UserDefaults.standard.integer(forKey: "DayStreak") + 1
-                UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
-            } else if UserDefaults.standard.integer(forKey: "dayCount") == 5{
-                dayStreak =  UserDefaults.standard.integer(forKey: "DayStreak") + 1
-                UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
-            } else if UserDefaults.standard.integer(forKey: "dayCount") == 6{
-                dayStreak =  UserDefaults.standard.integer(forKey: "DayStreak") + 1
-                UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
-            } else if UserDefaults.standard.integer(forKey: "dayCount") == 7{
-                dayStreak =  UserDefaults.standard.integer(forKey: "DayStreak") + 1
-                UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
-            } 
-        
+            switch UserDefaults.standard.integer(forKey: "dayCount") {
+                case 1:
+                    addDayStreak()
+                case 2:
+                    addDayStreak()
+                case 3:
+                    addDayStreak()
+                case 4:
+                    addDayStreak()
+                case 5:
+                    addDayStreak()
+                case 6:
+                    addDayStreak()
+                case 7:
+                    addDayStreak()
+                default:
+                    print("")
+            }
             
             performSegue(withIdentifier: "challengeDone", sender: self)
         }
     }
 }
- 

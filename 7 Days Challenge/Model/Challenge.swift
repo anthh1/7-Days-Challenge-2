@@ -16,4 +16,6 @@ struct Challenge {
     var challengeDesc: String
     var challengeImage: String
     var challengeVideo: String
+    
+    var videoThumbnail: String
 }
