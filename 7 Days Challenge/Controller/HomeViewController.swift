@@ -21,7 +21,7 @@ class HomeViewController: UITableViewController {
         Challenge(challengeID: 7, challengeName: "Wall Handstand", challengeDay: 7, challengeScore: 700, challengeDesc: "", challengeImage: "wallHandstand", challengeVideo: "chandstand")
     ]
     
-    var dayCount = 5
+    var dayCount = UserDefaults.standard.integer(forKey: "dayCount")
     var challengeDates = [String]()
     var challengeDay = UserDefaults.standard.integer(forKey: "firstDay")
     
