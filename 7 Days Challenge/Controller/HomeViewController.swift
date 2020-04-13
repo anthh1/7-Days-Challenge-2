@@ -14,12 +14,12 @@ class HomeViewController: UITableViewController {
 
     var challenges = [
         Challenge(challengeID: 1,challengeName: "Bench Push Up", challengeDay: 1, challengeScore: 100, challengeDesc: "this push up will be easier than floor push up because it is an inclined angle, therefore it will not be your full body weight, do this for 15 repetitions or as desired. ", challengeImage: "pushup", challengeVideo: "cpushup", videoThumbnail: "benchPushup1"),
-        Challenge(challengeID: 2, challengeName: "Burpees", challengeDay: 2, challengeScore: 200, challengeDesc: "Get into push up position, stand up and jump up! When you land, go back into push up position and do one push up, repeat. Do this for 10 times!", challengeImage: "burpees", challengeVideo: "cburpees", videoThumbnail: "burPess"),
+        Challenge(challengeID: 2, challengeName: "Push Up Burpees", challengeDay: 2, challengeScore: 200, challengeDesc: "Get into push up position, stand up and jump up! When you land, go back into push up position and do one push up, repeat. Do this for 10 times!", challengeImage: "burpees", challengeVideo: "cburpees", videoThumbnail: "burPess"),
         Challenge(challengeID: 3, challengeName: "3 Steps 180", challengeDay: 3, challengeScore: 300, challengeDesc: "Start with your left leg take one step forward, then with your right foot, land 90 degrees to the direction you are facing and finally land on your left leg with your right leg hanging, this is for practicing your balance.  go back the other way, repeat for 10 times.", challengeImage: "steps180", challengeVideo: "csteps180", videoThumbnail: "3Step"),
         Challenge(challengeID: 4, challengeName: "Reverse Plank", challengeDay: 4, challengeScore: 400, challengeDesc: "do the reverse plank from a sitting position with both legs outstretched in front, put your palms behind your butt and lift up your hip until you form a nice right angled triangle. and hold for 30 seconds or longer. ", challengeImage: "plank", challengeVideo: "cplank", videoThumbnail: "reversePlank"),
-        Challenge(challengeID: 5, challengeName: "Bench Dip", challengeDay: 5, challengeScore: 500, challengeDesc: "Step up with one leg and carry your whole body up, then lift the other leg’s knee to chest high or at least waist high. and repeat this for the other leg as well, go for 10 repetitions .", challengeImage: "benchDip", challengeVideo: "cbenchdipp", videoThumbnail: "benchDip"),
+        Challenge(challengeID: 5, challengeName: "Bench   Dip", challengeDay: 5, challengeScore: 500, challengeDesc: "Step up with one leg and carry your whole body up, then lift the other leg’s knee to chest high or at least waist high. and repeat this for the other leg as well, go for 10 repetitions .", challengeImage: "benchDip", challengeVideo: "cbenchdipp", videoThumbnail: "benchDip"),
         Challenge(challengeID: 6, challengeName: "Walk Up Stairs", challengeDay: 6, challengeScore: 600, challengeDesc: "Walk upstairs, by skipping one or two steps at a time depending on your abilities and repeat 5 times up and down.", challengeImage: "walkStairs", challengeVideo: "cwalkupstairs", videoThumbnail: "walkUp"),
-        Challenge(challengeID: 7, challengeName: "Wall Handstand", challengeDay: 7, challengeScore: 700, challengeDesc: "Use the wall anywhere to do a handstand, if you are able, maybe you can try hand stand push ups, if you want your walls to be as clean, make sure to clean your feet which might dirty the walls try to hold for 10 seconds.", challengeImage: "wallHandstand", challengeVideo: "chandstand", videoThumbnail: "wallHand")
+        Challenge(challengeID: 7, challengeName: "Hand Stand", challengeDay: 7, challengeScore: 700, challengeDesc: "Use the wall anywhere to do a handstand, if you are able, maybe you can try hand stand push ups, if you want your walls to be as clean, make sure to clean your feet which might dirty the walls try to hold for 10 seconds.", challengeImage: "wallHandstand", challengeVideo: "chandstand", videoThumbnail: "wallHand")
     ]
     
     var dayCount = UserDefaults.standard.integer(forKey: "dayCount")
@@ -32,6 +32,8 @@ class HomeViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,13 +120,13 @@ class HomeViewController: UITableViewController {
             let challenge = challenges[indexPath.row]
             cell.challengeNameLbl.text = challenge.challengeName
             cell.challengeScoreLbl.text = "\(challenge.challengeScore) pts"
-            cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
+            cell.challengeDayLbl.text = "DAY \(challenge.challengeDay)"
             cell.challengeImageBg.image = UIImage(named: "\(challenge.challengeImage)")
         }else if (indexPath.section == 1){
             let challenge = challenges[indexPath.row]
             cell.challengeNameLbl.text = challenge.challengeName
             cell.challengeScoreLbl.text = "\(challenge.challengeScore) pts"
-            cell.challengeDayLbl.text = "Day \(challenge.challengeDay)"
+            cell.challengeDayLbl.text = "DAY \(challenge.challengeDay)"
             cell.challengeImageBg.image = UIImage(named: "\(challenge.challengeImage)")
 
         }
@@ -176,6 +178,9 @@ class HomeViewController: UITableViewController {
         headerView.backgroundColor = .white
         
         let headerLabel = UILabel(frame: CGRect(x: 30, y: 15, width: tableView.bounds.size.width, height: 20))
+        headerLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        headerLabel.textColor = .darkGray
+    
         
         if section == 0 {
             headerLabel.text = "Today's Challenge"

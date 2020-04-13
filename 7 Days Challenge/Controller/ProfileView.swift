@@ -36,7 +36,6 @@ class ProfileView: UIViewController, UIImagePickerControllerDelegate & UINavigat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.largeTitleDisplayMode = .never
         achievementCollectionView.dataSource = self
                 
         if UserDefaults.standard.integer(forKey: "Score") == 200{
@@ -57,7 +56,7 @@ class ProfileView: UIViewController, UIImagePickerControllerDelegate & UINavigat
             }
         }
        
-        labelScore.text = "Score: \(UserDefaults.standard.integer(forKey: "Score"))"
+        labelScore.text = "\(UserDefaults.standard.integer(forKey: "Score"))pts"
     }
     
         func startSegue(startCode: Int) {

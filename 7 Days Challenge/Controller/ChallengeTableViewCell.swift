@@ -19,9 +19,7 @@ class ChallengeTableViewCell: UITableViewCell {
 
     
     override func awakeFromNib() {
-        super.awakeFromNib()
-
-        challengeNameLbl.numberOfLines = 2
+        super.awakeFromNib()        
         bgTable.layer.cornerRadius = 20
         self.selectedBackgroundView = UIView()
 //      self.selectionStyle = .none
