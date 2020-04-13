@@ -8,19 +8,32 @@
 
 import UIKit
 import Lottie
-class ProfileView: UIViewController {
+import MobileCoreServices
+
+class ProfileView: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     @IBOutlet weak var achievementCollectionView: UICollectionView!
     @IBOutlet var imageProfile: UIImageView!
     @IBOutlet var labelScore: UILabel!
         
+    @IBOutlet weak var seeVideoBtn: UIButton!
+    
     var achievements = Achievement.fetchAchievement()
     var startCode = 0
     var animationJSON = ""
     var animationName = ""
     var achievementUnlock = UserDefaults.standard.integer(forKey: "Unlock")
     var dayStreak = UserDefaults.standard.integer(forKey: "DayStreak")
+    var controller = UIImagePickerController()
+
     
+    @IBAction func seeVideo(_ sender: Any) {
+        controller.sourceType = UIImagePickerController.SourceType.photoLibrary
+        controller.mediaTypes = [kUTTypeMovie as String]
+        controller.delegate = self
+            
+        present(controller, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

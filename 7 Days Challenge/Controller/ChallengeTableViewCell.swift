@@ -29,7 +29,6 @@ class ChallengeTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-       
         if isSelected == true {
             animate()
             Timer.scheduledTimer(withTimeInterval: 0.18, repeats: false) { (timer) in
@@ -40,8 +39,7 @@ class ChallengeTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 7, left: 20, bottom: 7, right: 20))
     }
     
     func animate() {

@@ -25,7 +25,7 @@ class HomeViewController: UITableViewController {
     var challengeDates = [String]()
     var challengeDay = UserDefaults.standard.integer(forKey: "firstDay")
     
-    var cellSpacingHeight: CGFloat = 50
+    var cellSpacingHeight: CGFloat = 43
     var selectedIndex = Int()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -135,10 +135,10 @@ class HomeViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: CGRect(x: 10, y: 20, width: tableView.bounds.size.width, height: 30))
+        let headerView = UIView(frame: CGRect(x: 10, y: 15, width: tableView.bounds.size.width, height: 20))
         headerView.backgroundColor = .white
         
-        let headerLabel = UILabel(frame: CGRect(x: 30, y: 20, width: tableView.bounds.size.width, height: 30))
+        let headerLabel = UILabel(frame: CGRect(x: 30, y: 15, width: tableView.bounds.size.width, height: 20))
         
         if section == 0 {
             headerLabel.text = "Today's Challenge"

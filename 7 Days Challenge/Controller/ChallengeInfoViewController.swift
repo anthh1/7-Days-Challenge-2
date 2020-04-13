@@ -81,12 +81,16 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
       
+        
         if let selectedVideo:URL = (info[UIImagePickerController.InfoKey.mediaURL] as? URL) {
 //            let alert = UIAlertController(title: "Submit Video", message: "Are you sure you want to submit it to gallery?", preferredStyle: .alert)
             
             let selectorToCall = #selector(videoSaved(_:didFinishSavingWithError:context:))
+            
             UISaveVideoAtPathToSavedPhotosAlbum(selectedVideo.relativePath, self, selectorToCall, nil)
+            
             let videoData = try? Data(contentsOf: selectedVideo)
+            
             let paths = NSSearchPathForDirectoriesInDomains(
                     FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
             let documentsDirectory: URL = URL(fileURLWithPath: paths[0])
@@ -94,6 +98,7 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
             try! videoData?.write(to: dataPath, options: [])
         }
         picker.dismiss(animated: true)
+        
     }
     
     func addDayStreak() {
@@ -102,38 +107,52 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
     }
     
     @objc func videoSaved(_ video: String, didFinishSavingWithError error: NSError!, context: UnsafeMutableRawPointer){
-        if let theError = error {
-            print("error saving the video = \(theError)")
-        } else {
-           DispatchQueue.main.async(execute: { () -> Void in
-           })
-            currentScore = UserDefaults.standard.integer(forKey: "Score")
-            newScore = challengeScore + currentScore
-            UserDefaults.standard.set(newScore, forKey: "Score")
-            if UserDefaults.standard.integer(forKey: "Unlock") == 0 {
-                UserDefaults.standard.set(1, forKey: "Unlock")
+       
+        let alert = UIAlertController(title: "Submit Video", message: "Are you sure want to submit it to gallery?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: .cancel, handler: { (alert) -> Void in
+            if let theError = error {
+                print("error saving the video = \(theError)")
+            } else {
+               DispatchQueue.main.async(execute: { () -> Void in
+               })
+                self.currentScore = UserDefaults.standard.integer(forKey: "Score")
+                self.newScore = self.challengeScore + self.currentScore
+                UserDefaults.standard.set(self.newScore, forKey: "Score")
+                if UserDefaults.standard.integer(forKey: "Unlock") == 0 {
+                    UserDefaults.standard.set(1, forKey: "Unlock")
+                }
+                
+                switch UserDefaults.standard.integer(forKey: "dayCount") {
+                    case 1:
+                        self.addDayStreak()
+                    case 2:
+                        self.addDayStreak()
+                    case 3:
+                        self.addDayStreak()
+                    case 4:
+                        self.addDayStreak()
+                    case 5:
+                        self.addDayStreak()
+                    case 6:
+                        self.addDayStreak()
+                    case 7:
+                        self.addDayStreak()
+                    default:
+                        print("")
+                }
+                self.performSegue(withIdentifier: "challengeDone", sender: self)
             }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Retake", style: .default, handler: { (alert) -> Void in
             
-            switch UserDefaults.standard.integer(forKey: "dayCount") {
-                case 1:
-                    addDayStreak()
-                case 2:
-                    addDayStreak()
-                case 3:
-                    addDayStreak()
-                case 4:
-                    addDayStreak()
-                case 5:
-                    addDayStreak()
-                case 6:
-                    addDayStreak()
-                case 7:
-                    addDayStreak()
-                default:
-                    print("")
-            }
-            
-            performSegue(withIdentifier: "challengeDone", sender: self)
-        }
+            self.present(self.controller, animated: true, completion: nil)
+
+        }))
+
+        present(alert, animated: true, completion: nil)
+        
+        
+        
     }
 }
