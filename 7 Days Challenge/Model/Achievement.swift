@@ -23,7 +23,7 @@ class Achievement {
             Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "300points")!),
             Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "7day-streak")!),
             Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "1000points")!),
-            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "well-done")!),
+            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "well-done")!)
 //            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "dummy")!),
 //            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "dummy")!),
 //            Achievement(achievementName: "Achievement1", achievementImg: UIImage(named: "dummy")!),

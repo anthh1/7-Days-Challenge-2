@@ -15,13 +15,13 @@ class AchievementModal: UIViewController {
     
     
     var animationName = ""
-    
-    
+ 
      let animationView = AnimationView()
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
 
+        
         // Do any additional setup after loading the view.
                 setupAnimation()
            }
@@ -34,6 +34,7 @@ class AchievementModal: UIViewController {
                 animationView.loopMode = .loop
                 animationView.play()
                 view.addSubview(animationView)
+            
            }
         // Do any additional setup after loading the view.
     }
