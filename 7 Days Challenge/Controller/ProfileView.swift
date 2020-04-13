@@ -137,11 +137,6 @@ extension ProfileView: UICollectionViewDataSource, UICollectionViewDelegate{
         default:
             print("")
         }
-            
-            
        }
-
-        
-    
     }
 }
