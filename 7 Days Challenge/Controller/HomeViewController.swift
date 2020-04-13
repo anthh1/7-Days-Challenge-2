@@ -38,6 +38,13 @@ class HomeViewController: UITableViewController {
         self.navigationItem.setHidesBackButton(true, animated: true);
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
+        self.tableView.backgroundView = {
+            var view = UIView(frame: CGRect.zero)
+            view.backgroundColor = .white
+            
+            return view
+        }()
+        
         let today: Int
         let dateFormatter = DateFormatter()
         dateFormatter.setLocalizedDateFormatFromTemplate("dd")
@@ -135,19 +142,36 @@ class HomeViewController: UITableViewController {
         
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//
+//        if section == 0 {
+//            return "Today's Challenge"
+//        } else {
+//            return "Next Challenges"
+//        }
+//
+//    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 10, y: 20, width: tableView.bounds.size.width, height: 30))
+        headerView.backgroundColor = .white
+        
+        let headerLabel = UILabel(frame: CGRect(x: 30, y: 20, width: tableView.bounds.size.width, height: 30))
         
         if section == 0 {
-            return "Today's Challenge"
+            headerLabel.text = "Today's Challenge"
         } else {
-            return "Next Challenges"
+            headerLabel.text = "Next Challenge"
         }
         
+        headerView.addSubview(headerLabel)
+        
+        return headerView
     }
     
-    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        tableView.tableHeaderView?.backgroundColor = UIColor.blue
-    }
+//    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        tableView.tableHeaderView?.backgroundColor = UIColor.blue
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
