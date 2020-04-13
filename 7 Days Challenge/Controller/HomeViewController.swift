@@ -51,7 +51,7 @@ class HomeViewController: UITableViewController {
         content.body = "Hey, let's do a challenge!"
         
         //Create notification trigger
-        let date = Date().addingTimeInterval(5)
+        let date = Date().addingTimeInterval(10)
         
         let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
         
