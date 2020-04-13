@@ -125,7 +125,7 @@ class ChallengeInfoViewController: UIViewController, UINavigationControllerDeleg
             } else if UserDefaults.standard.integer(forKey: "dayCount") == 7{
                 dayStreak =  UserDefaults.standard.integer(forKey: "DayStreak") + 1
                 UserDefaults.standard.set(dayStreak, forKey: "DayStreak")
-            }
+            } 
         
             
             performSegue(withIdentifier: "challengeDone", sender: self)
