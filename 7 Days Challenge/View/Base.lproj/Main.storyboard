@@ -266,6 +266,7 @@
                         <outlet property="achievementCollectionView" destination="SuW-a4-nao" id="7te-UC-FyE"/>
                         <outlet property="imageProfile" destination="FWb-S6-yri" id="VBE-GI-CYL"/>
                         <outlet property="labelScore" destination="LUh-fl-QbB" id="4oP-2q-bbo"/>
+                        <segue destination="zTf-hh-52s" kind="presentation" identifier="achievementSegue" id="qRD-Iu-PW2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCq-Py-Gmv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -306,7 +307,7 @@
             <objects>
                 <viewController id="zTf-hh-52s" customClass="AchievementModal" customModule="__Days_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OlK-hE-8yG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPW-I1-9eo">

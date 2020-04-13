@@ -26,8 +26,8 @@ class ProfileView: UIViewController {
         achievementCollectionView.dataSource = self
 
         if achievementUnlock >= 1 {
-            for n in 0...achievementUnlock {
-                achievements[n-1].enable = true
+            for n in 0...achievementUnlock-1 {
+                achievements[n].enable = true
             }
         }
        
