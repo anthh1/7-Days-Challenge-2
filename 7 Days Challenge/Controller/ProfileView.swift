@@ -14,10 +14,9 @@ class ProfileView: UIViewController, UIImagePickerControllerDelegate & UINavigat
 
     @IBOutlet weak var achievementCollectionView: UICollectionView!
     @IBOutlet var imageProfile: UIImageView!
-    @IBOutlet var labelScore: UILabel!
-        
+    @IBOutlet var labelScore: UILabel!        
     @IBOutlet weak var seeVideoBtn: UIButton!
-    
+
     var achievements = Achievement.fetchAchievement()
     var startCode = 0
     var animationJSON = ""

@@ -137,7 +137,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Good Morning" id="8xG-lb-Rtr">
                         <barButtonItem key="backBarButtonItem" title="Back" id="40z-Ol-RiQ"/>
-                        <barButtonItem key="rightBarButtonItem" title="My Score" id="cgB-on-dTg">
+                        <barButtonItem key="rightBarButtonItem" image="person.crop.circle.fill" catalog="system" id="cgB-on-dTg">
                             <connections>
                                 <segue destination="csV-2l-Wu6" kind="show" id="OPC-ow-miQ"/>
                             </connections>
@@ -515,6 +515,7 @@
     <resources>
         <image name="Badge" width="269" height="269"/>
         <image name="Group" width="96" height="96"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <image name="thumb" width="414" height="300"/>
     </resources>
 </document>
