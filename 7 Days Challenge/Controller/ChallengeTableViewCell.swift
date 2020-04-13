@@ -29,8 +29,13 @@ class ChallengeTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        animate()
+       
+        if isSelected == true {
+            animate()
+            Timer.scheduledTimer(withTimeInterval: 0.18, repeats: false) { (timer) in
+                self.isSelected = false
+            }
+        }
     }
     
     override func layoutSubviews() {
